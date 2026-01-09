@@ -317,7 +317,8 @@ header.scrolled .hamburger span {
     width: 48px;
     /* Reduced to ~40% from 120px */
     height: 48px;
-    color: #444;
+    color: #000;
+    /* Changed from #444 to black */
     margin-bottom: 25px;
     transition: transform 0.3s, color 0.3s;
     stroke-width: 1.5;
