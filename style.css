@@ -319,7 +319,8 @@ header.scrolled .hamburger span {
     height: 48px;
     color: #000;
     /* Changed from #444 to black */
-    margin-bottom: 25px;
+    margin-bottom: 21px;
+    /* Reduced to 85% of 25px */
     transition: transform 0.3s, color 0.3s;
     stroke-width: 1.5;
 }
