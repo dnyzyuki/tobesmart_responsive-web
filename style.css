@@ -723,7 +723,8 @@ footer {
 
     .footer-bottom {
         flex-direction: column;
-        text-align: center;
+        text-align: left;
+        /* Changed from center to left */
         gap: 30px;
     }
 }
