@@ -781,8 +781,8 @@ footer {
 
 .sky-phone .sky-icon i {
     display: inline-block;
-    transform: rotate(-90deg);
-    /* Counter-clockwise 90 degrees */
+    transform: rotate(-180deg);
+    /* Total 180 degrees counter-clockwise */
 }
 
 .sky-phone .sky-text .label {
