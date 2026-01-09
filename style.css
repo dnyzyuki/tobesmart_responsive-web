@@ -777,6 +777,10 @@ footer {
     color: var(--primary-color);
     font-size: 20px;
     margin-right: 12px;
+}
+
+.sky-phone .sky-icon i {
+    display: inline-block;
     transform: rotate(-90deg);
     /* Counter-clockwise 90 degrees */
 }
