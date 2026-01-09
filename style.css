@@ -777,6 +777,8 @@ footer {
     color: var(--primary-color);
     font-size: 20px;
     margin-right: 12px;
+    transform: rotate(180deg);
+    /* Rotate 180 degrees as requested */
 }
 
 .sky-phone .sky-text .label {
