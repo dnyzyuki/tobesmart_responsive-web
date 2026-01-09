@@ -1,0 +1,742 @@
+/* CSS for TobeSmart Website */
+
+:root {
+    --primary-color: #0060A5;
+    --dark-bg: #111111;
+    --text-color: #333;
+    --light-text: #ffffff;
+    --gray-bg: #f8f9fa;
+    --container-width: 1200px;
+
+    /* Card Colors */
+    --card-1: #2c2c2c;
+    --card-2: #6d5b4e;
+    --card-3: #5c6c74;
+    --card-4: #2b4b64;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #fff;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+header {
+    background: transparent;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background 0.3s ease, background-image 0.3s ease;
+}
+
+header.scrolled {
+    background: rgba(0, 0, 0, 0.8);
+    background-image: none;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* Align logo to left, menu to right */
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--light-text);
+    /* White Logo */
+}
+
+.logo img {
+    height: 30px;
+    /* Adjust based on actual image ratio */
+    display: block;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 90px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--light-text);
+    /* White Font */
+    font-weight: 600;
+    font-size: 16px;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 0.7;
+    color: var(--light-text);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 21px;
+    /* 30px * 0.7 */
+    height: 14px;
+    /* 20px * 0.7 */
+}
+
+.hamburger span {
+    display: block;
+    height: 2px;
+    /* Reduced from 3px */
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Scrolled Header Hamburger Color */
+header.scrolled .hamburger span {
+    background-color: #fff;
+}
+
+.hero {
+    height: 80vh;
+    min-height: 600px;
+    background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--light-text);
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 45px;
+    /* Reduced to ~80% from 56px */
+    font-weight: 600;
+    /* Further reduced from 700 */
+    margin-bottom: 25px;
+    line-height: 1.2;
+    /* Adjusted from 1.3 to 1.2 */
+}
+
+.hero h1 span {
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 15px 40px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-light {
+    background-color: white;
+    color: var(--primary-color);
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Intro Circles */
+.intro-circles {
+    padding: 100px 20px;
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.circle-item {
+    flex: 1;
+    text-align: center;
+    max-width: 350px;
+}
+
+.circle-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin: 0 auto 30px;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.circle-item h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.circle-item p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.btn-more {
+    background: none;
+    border: 1px solid #ddd;
+    padding: 8px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn-more:hover {
+    background: #f0f0f0;
+}
+
+/* Remote Management */
+.remote-management {
+    padding: 120px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.remote-management::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/sky_bg.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.75;
+    z-index: -1;
+}
+
+.section-title {
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 36px;
+    font-weight: 600;
+    /* Further reduced from 700 */
+    margin-bottom: 20px;
+    line-height: 1.1;
+    /* Tightened line-height (approx 80% of 1.4) */
+    color: #333;
+    /* Matching the design's dark text on sky */
+}
+
+.section-title p {
+    font-size: 18px;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.feature-icons {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    /* Increased gap to match design */
+}
+
+.icon-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-box i {
+    width: 60px;
+    /* Lucide icons need explicit width/height sometimes */
+    height: 60px;
+    color: #444;
+    margin-bottom: 25px;
+    transition: transform 0.3s;
+    stroke-width: 1.5;
+    /* Makes lines thinner and more sophisticated */
+}
+
+.icon-box:hover i {
+    transform: scale(1.1);
+    color: var(--primary-color);
+}
+
+.icon-box p {
+    font-weight: 700;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Service Cards */
+.main-services {
+    padding: 100px 20px;
+}
+
+.service-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.card {
+    padding: 40px 30px;
+    border-radius: 20px;
+    color: white;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-1 {
+    background-color: var(--card-1);
+}
+
+.card-2 {
+    background-color: var(--card-2);
+}
+
+.card-3 {
+    background-color: var(--card-3);
+}
+
+.card-4 {
+    background-color: var(--card-4);
+}
+
+.card h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.card p {
+    font-size: 16px;
+    opacity: 0.9;
+}
+
+/* Partners */
+.partners {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.logo-item {
+    font-weight: 800;
+    font-size: 20px;
+    color: #ccc;
+    padding: 20px;
+    border: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 8px;
+}
+
+/* Category Grid */
+.categories {
+    padding: 100px 20px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 300px);
+    gap: 20px;
+}
+
+.category-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.category-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.category-item:hover img {
+    transform: scale(1.1);
+}
+
+.category-item span {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-bg);
+    color: #888;
+    padding: 80px 20px;
+}
+
+.footer-top {
+    border-bottom: 1px solid #222;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-logo img {
+    height: 40px;
+    display: block;
+    opacity: 0.8;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-info p,
+.footer-contact p {
+    margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .service-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .intro-circles {
+        flex-wrap: wrap;
+        padding: 60px 20px;
+    }
+
+    .circle-item {
+        flex: 1 1 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 60px;
+    }
+
+    nav {
+        justify-content: space-between;
+        /* Space out logo and hamburger */
+        gap: 0;
+    }
+
+    .hamburger {
+        display: flex;
+        /* Show hamburger on mobile */
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg);
+        /* Adjusted for smaller height */
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+        /* Adjusted for smaller height */
+    }
+
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 60px;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.85);
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        transition: 0.3s;
+        padding-top: 40px;
+        display: flex;
+        /* Override display:none */
+        z-index: 999;
+    }
+
+    .nav-links.mobile-active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .nav-links a {
+        font-size: 20px;
+        color: #fff;
+    }
+
+    .hero {
+        height: 60vh;
+        min-height: 400px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero h1 span {
+        font-size: 24px;
+    }
+
+    .intro-circles {
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+    }
+
+    .circle-item {
+        max-width: 100%;
+    }
+
+    .circle-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .feature-icons {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .service-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        min-height: 200px;
+        padding: 30px 20px;
+    }
+
+    .logo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .logo-item {
+        font-size: 14px;
+        padding: 15px 10px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .category-grid .category-item {
+        height: 250px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}
+
+/* Skyscraper Quick Menu */
+.skyscraper {
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    z-index: 2000;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-end;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    /* Smooth transition for opacity and visibility */
+}
+
+.skyscraper.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sky-item {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 40px;
+    text-decoration: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    border: 1px solid #eee;
+    min-width: 180px;
+}
+
+.sky-phone .sky-icon {
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-right: 12px;
+}
+
+.sky-phone .sky-text .label {
+    display: block;
+    font-size: 11px;
+    color: #888;
+}
+
+.sky-phone .sky-text .value {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    color: #333;
+}
+
+.sky-consult {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.sky-consult .sky-icon {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 12px;
+}
+
+.sky-consult .sky-text .label {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.sky-item:hover {
+    transform: translateX(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.sky-top {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 11px;
+    font-weight: 700;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+}
+
+.sky-top i {
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.sky-top:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .skyscraper {
+        right: 15px;
+        bottom: 30px;
+        transform: scale(0.85);
+        transform-origin: bottom right;
+    }
+}
