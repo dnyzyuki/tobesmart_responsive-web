@@ -278,6 +278,8 @@ header.scrolled .hamburger span {
 
 .section-title {
     margin-bottom: 60px;
+    text-align: center;
+    /* Center align all section titles */
 }
 
 .section-title h2 {
