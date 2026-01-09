@@ -778,8 +778,7 @@ footer {
 .sky-phone .sky-text .label-txt {
     display: block;
     font-size: 13.2px;
-    /* 120% of 11px */
-    color: #888;
+    color: #333;
     font-weight: 400;
     /* Remove bold */
 }
