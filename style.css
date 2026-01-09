@@ -807,6 +807,13 @@ footer {
     color: #fff;
     font-size: 20px;
     margin-right: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.sky-consult .sky-icon svg {
+    width: 20px;
+    height: 20px;
 }
 
 .sky-consult .sky-text .label {
