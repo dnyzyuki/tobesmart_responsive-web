@@ -472,8 +472,8 @@ header.scrolled .hamburger span {
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(100, 1fr);
-    /* 100컬럼 시스템으로 초정밀 조정 */
+    grid-template-columns: repeat(20, 1fr);
+    /* 20컬럼 시스템으로 정밀 조정 */
     grid-template-rows: repeat(2, 300px);
     gap: 24px;
 }
@@ -486,30 +486,30 @@ header.scrolled .hamburger span {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* 첫 번째 줄 비율 조정 (50% : 25% : 25%) */
+/* 첫 번째 줄 비율 조정 (기존 2:1:1 유지 -> 10:5:5) */
 .category-item:nth-child(1) {
-    grid-column: span 50;
+    grid-column: span 10;
 }
 
 .category-item:nth-child(2) {
-    grid-column: span 25;
+    grid-column: span 5;
 }
 
 .category-item:nth-child(3) {
-    grid-column: span 25;
+    grid-column: span 5;
 }
 
-/* 두 번째 줄 비율 조정 (요청: 23% : 32% : 45%) */
+/* 두 번째 줄 비율 조정 (요청: 20% : 35% : 45% -> 4:7:9) */
 .category-item:nth-child(4) {
-    grid-column: span 23;
+    grid-column: span 4;
 }
 
 .category-item:nth-child(5) {
-    grid-column: span 32;
+    grid-column: span 7;
 }
 
 .category-item:nth-child(6) {
-    grid-column: span 45;
+    grid-column: span 9;
 }
 
 .category-item img {
@@ -555,8 +555,8 @@ footer {
 
 .footer-top {
     border-bottom: 1px solid #222;
-    padding-bottom: 40px;
-    margin-bottom: 40px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .footer-logo img {
