@@ -472,8 +472,8 @@ header.scrolled .hamburger span {
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* 4컬럼 시스템 */
+    grid-template-columns: repeat(20, 1fr);
+    /* 20컬럼 시스템으로 정밀 조정 */
     grid-template-rows: repeat(2, 300px);
     gap: 24px;
 }
@@ -486,9 +486,30 @@ header.scrolled .hamburger span {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
-/* 2칸 차지하는 넓은 박스 설정 */
-.category-item.wide {
-    grid-column: span 2;
+/* 첫 번째 줄 비율 조정 (기존 2:1:1 유지 -> 10:5:5) */
+.category-item:nth-child(1) {
+    grid-column: span 10;
+}
+
+.category-item:nth-child(2) {
+    grid-column: span 5;
+}
+
+.category-item:nth-child(3) {
+    grid-column: span 5;
+}
+
+/* 두 번째 줄 비율 조정 (요청: 15% : 25% : 60% -> 3:5:12) */
+.category-item:nth-child(4) {
+    grid-column: span 3;
+}
+
+.category-item:nth-child(5) {
+    grid-column: span 5;
+}
+
+.category-item:nth-child(6) {
+    grid-column: span 12;
 }
 
 .category-item img {
@@ -693,7 +714,8 @@ footer {
     }
 
     .category-grid .category-item,
-    .category-grid .category-item.wide {
+    .category-grid .category-item.wide,
+    .category-grid .category-item:nth-child(n) {
         grid-column: span 1;
         height: 250px;
     }
