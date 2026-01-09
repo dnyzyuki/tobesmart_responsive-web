@@ -420,37 +420,57 @@ header.scrolled .hamburger span {
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    /* 4컬럼 시스템 */
     grid-template-rows: repeat(2, 300px);
-    gap: 20px;
+    gap: 24px;
 }
 
 .category-item {
     position: relative;
-    border-radius: 15px;
+    border-radius: 20px;
+    /* 라운드 값 증가 */
     overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* 2칸 차지하는 넓은 박스 설정 */
+.category-item.wide {
+    grid-column: span 2;
 }
 
 .category-item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .category-item:hover img {
-    transform: scale(1.1);
+    transform: scale(1.08);
+}
+
+/* 이미지 하단 그라데이션 오버레이 (글자 가독성) */
+.category-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 0%, transparent 100%);
+    pointer-events: none;
 }
 
 .category-item span {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background: rgba(0, 0, 0, 0.6);
+    bottom: 25px;
+    left: 25px;
     color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 20px;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Footer */
@@ -619,7 +639,9 @@ footer {
         grid-template-rows: auto;
     }
 
-    .category-grid .category-item {
+    .category-grid .category-item,
+    .category-grid .category-item.wide {
+        grid-column: span 1;
         height: 250px;
     }
 
