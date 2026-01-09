@@ -70,7 +70,8 @@ nav {
 }
 
 .logo img {
-    height: 30px;
+    height: 25px;
+    /* Reduced to ~85% from 30px */
     /* Adjust based on actual image ratio */
     display: block;
 }
@@ -457,7 +458,8 @@ footer {
 }
 
 .footer-logo img {
-    height: 40px;
+    height: 34px;
+    /* Reduced to 85% from 40px */
     display: block;
     opacity: 0.8;
 }
