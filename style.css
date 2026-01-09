@@ -550,7 +550,8 @@ header.scrolled .hamburger span {
 footer {
     background-color: var(--dark-bg);
     color: #888;
-    padding: 80px 20px;
+    padding: 64px 20px;
+    /* Reduced to 80% of 80px */
 }
 
 .footer-top {
