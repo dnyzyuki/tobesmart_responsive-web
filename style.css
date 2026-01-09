@@ -499,17 +499,17 @@ header.scrolled .hamburger span {
     grid-column: span 5;
 }
 
-/* 두 번째 줄 비율 조정 (요청: 15% : 25% : 60% -> 3:5:12) */
+/* 두 번째 줄 비율 조정 (요청: 20% : 35% : 45% -> 4:7:9) */
 .category-item:nth-child(4) {
-    grid-column: span 3;
+    grid-column: span 4;
 }
 
 .category-item:nth-child(5) {
-    grid-column: span 5;
+    grid-column: span 7;
 }
 
 .category-item:nth-child(6) {
-    grid-column: span 12;
+    grid-column: span 9;
 }
 
 .category-item img {
