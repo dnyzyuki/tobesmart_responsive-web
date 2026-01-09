@@ -274,6 +274,27 @@
             </div>
         </div>
     </footer>
+    <!-- Skyscraper Quick Menu -->
+    <div class="skyscraper">
+        <a href="tel:1577-3119" class="sky-item sky-phone">
+            <div class="sky-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="sky-text">
+                <span class="label">전화상담</span>
+                <span class="value">1577-3119</span>
+            </div>
+        </a>
+        <a href="#" class="sky-item sky-consult">
+            <div class="sky-icon"><i data-lucide="pen-line"></i></div>
+            <div class="sky-text">
+                <span class="label">상담신청</span>
+            </div>
+        </a>
+        <a href="#" class="sky-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+            <i class="fas fa-chevron-up"></i>
+            <span>TOP</span>
+        </a>
+    </div>
+
     <script>
         // Header & Skyscraper Scroll
         window.addEventListener('scroll', function () {
@@ -342,27 +363,6 @@
         // Start Auto Slide
         slideInterval = setInterval(nextSlide, 5000);
     </script>
-
-    <!-- Skyscraper Quick Menu -->
-    <div class="skyscraper">
-        <a href="tel:1577-3119" class="sky-item sky-phone">
-            <div class="sky-icon"><i class="fas fa-phone-alt"></i></div>
-            <div class="sky-text">
-                <span class="label">전화 상담하기</span>
-                <span class="value">1577-3119</span>
-            </div>
-        </a>
-        <a href="#" class="sky-item sky-consult">
-            <div class="sky-icon"><i data-lucide="pen-line"></i></div>
-            <div class="sky-text">
-                <span class="label">상담 신청하기</span>
-            </div>
-        </a>
-        <a href="#" class="sky-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
-            <i class="fas fa-chevron-up"></i>
-            <span>TOP</span>
-        </a>
-    </div>
 </body>
 
 </html>
