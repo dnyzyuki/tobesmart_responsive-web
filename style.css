@@ -323,11 +323,7 @@ header.scrolled .hamburger span {
     stroke-width: 1.5;
 }
 
-.icon-box:hover i,
-.icon-box:hover svg {
-    transform: scale(1.1);
-    color: var(--primary-color);
-}
+/* 호버 효과 제거 */
 
 .icon-box p {
     font-weight: 700;
