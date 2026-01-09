@@ -777,18 +777,23 @@ footer {
 
 .sky-phone .sky-text .label-txt {
     display: block;
-    font-size: 13.2px;
+    font-size: 18px;
+    /* Matched with phone number size */
     color: #333;
     font-weight: 400;
-    /* Remove bold */
+    /* Keep regular weight as requested */
 }
 
 .sky-phone .sky-text .value {
     display: block;
     font-size: 18px;
-    /* 120% of 15px */
     font-weight: 700;
     color: #333;
+}
+
+.sky-text {
+    text-align: center;
+    /* Ensure horizontal centering for all lines */
 }
 
 .sky-consult {
