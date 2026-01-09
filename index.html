@@ -36,13 +36,76 @@
     <main>
         <!-- 메인 히어로 섹션: 첫인상을 결정하는 대문 영역 -->
         <section class="hero">
-            <div class="hero-overlay"></div>
-            <div class="hero-content container">
-                <h1>필요한 기능을 한 곳에<br><span>투비스마트 키오스크</span></h1>
-                <div class="hero-buttons">
-                    <a href="#" class="btn btn-primary">자세히보기</a>
-                    <a href="#" class="btn btn-light">상담신청</a>
+            <div class="slider-container">
+                <!-- Slide 1 -->
+                <div class="slide active"
+                    style="background-image: url('https://plus.unsplash.com/premium_photo-1661950075159-fc0ec52d9dca?fm=jpg&q=60&w=3000');">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content container">
+                        <h1>필요한 기능을 한 곳에<br><span>투비스마트 키오스크</span></h1>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn btn-primary">자세히보기</a>
+                            <a href="#" class="btn btn-light">상담신청</a>
+                        </div>
+                    </div>
                 </div>
+                <!-- Slide 2 -->
+                <div class="slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=2000');">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content container">
+                        <h1>무인 매장 운영의 시작<br><span>스마트 키오스크 솔루션</span></h1>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn btn-primary">자세히보기</a>
+                            <a href="#" class="btn btn-light">상담신청</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1556742044-3c52d6e88c62?q=80&w=2000');">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content container">
+                        <h1>스마트한 결제 시스템<br><span>세일즈큐브 통합 결제</span></h1>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn btn-primary">자세히보기</a>
+                            <a href="#" class="btn btn-light">상담신청</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 4 -->
+                <div class="slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=2000');">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content container">
+                        <h1>앞서가는 비즈니스 파트너<br><span>스페이스큐브 공간 관리</span></h1>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn btn-primary">자세히보기</a>
+                            <a href="#" class="btn btn-light">상담신청</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 5 -->
+                <div class="slide"
+                    style="background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2000');">
+                    <div class="hero-overlay"></div>
+                    <div class="hero-content container">
+                        <h1>365일 실시간 원격 관리<br><span>컨트롤큐브 통합 솔루션</span></h1>
+                        <div class="hero-buttons">
+                            <a href="#" class="btn btn-primary">자세히보기</a>
+                            <a href="#" class="btn btn-light">상담신청</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slider Indicators -->
+            <div class="slider-indicators">
+                <div class="dot active" onclick="currentSlide(0)"></div>
+                <div class="dot" onclick="currentSlide(1)"></div>
+                <div class="dot" onclick="currentSlide(2)"></div>
+                <div class="dot" onclick="currentSlide(3)"></div>
+                <div class="dot" onclick="currentSlide(4)"></div>
             </div>
         </section>
 
@@ -243,6 +306,41 @@
 
         // Initialize Lucide Icons
         lucide.createIcons();
+
+        // Hero Slider Logic
+        let currentSlideIndex = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        let slideInterval;
+
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+
+            currentSlideIndex = index;
+            if (currentSlideIndex >= slides.length) currentSlideIndex = 0;
+            if (currentSlideIndex < 0) currentSlideIndex = slides.length - 1;
+
+            slides[currentSlideIndex].classList.add('active');
+            dots[currentSlideIndex].classList.add('active');
+        }
+
+        function nextSlide() {
+            showSlide(currentSlideIndex + 1);
+        }
+
+        function currentSlide(index) {
+            showSlide(index);
+            resetInterval();
+        }
+
+        function resetInterval() {
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        // Start Auto Slide
+        slideInterval = setInterval(nextSlide, 5000);
     </script>
 
     <!-- Skyscraper Quick Menu -->
