@@ -331,8 +331,8 @@ header.scrolled .hamburger span {
     font-weight: 700;
     font-size: 18px;
     color: #333;
-    line-height: 1.2;
-    /* Reduced to ~80% of original (typical 1.4-1.6) */
+    line-height: 1.32;
+    /* Increased to 110% of previous 1.2 */
 }
 
 /* Service Cards */
