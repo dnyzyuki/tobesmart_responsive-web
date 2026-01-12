@@ -734,6 +734,21 @@ footer {
         /* Changed from center to left */
         gap: 30px;
     }
+
+    /* Section Title Responsive */
+    .section-title h2 {
+        font-size: 30px;
+        /* Reduced from 36px */
+        margin-bottom: 15px;
+    }
+
+    .section-title p {
+        font-size: 17px;
+    }
+
+    .section-title {
+        margin-bottom: 40px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -743,6 +758,22 @@ footer {
 
     .hero h1 {
         font-size: 28px;
+    }
+
+    .section-title h2 {
+        font-size: 26px;
+        /* Reduced from 36px */
+    }
+
+    .section-title p {
+        font-size: 16px;
+        /* Reduced from 18px */
+    }
+
+    .circle-item h3,
+    .card h3 {
+        font-size: 20px;
+        /* Scaled down for mobile */
     }
 }
 
