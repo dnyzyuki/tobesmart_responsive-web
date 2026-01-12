@@ -568,8 +568,8 @@ footer {
 }
 
 .footer-logo img {
-    height: 34px;
-    /* Reduced to 85% from 40px */
+    height: 27px;
+    /* Reduced to 80% from 34px */
     display: block;
     opacity: 0.8;
 }
