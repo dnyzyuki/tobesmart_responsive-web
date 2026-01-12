@@ -2,7 +2,7 @@
 
 :root {
     /* 브랜드 메인 컬러 및 기본 색상 설정 */
-    --primary-color: #246FF4;
+    --primary-color: #0060A5;
     --dark-bg: #111111;
     --text-color: #333;
     --light-text: #ffffff;
@@ -116,7 +116,7 @@ nav {
 }
 
 .nav-links a:hover {
-    color: #246FF4;
+    color: var(--primary-color);
 }
 
 .nav-links a:hover::after {
@@ -160,7 +160,7 @@ nav {
 
 .mega-item i {
     font-size: 24px;
-    color: #246FF4;
+    color: var(--primary-color);
     margin-bottom: 15px;
 }
 
@@ -178,7 +178,7 @@ nav {
 }
 
 .mega-item:hover h4 {
-    color: #246FF4;
+    color: var(--primary-color);
 }
 
 /* Scrolled Header Adjustments */
