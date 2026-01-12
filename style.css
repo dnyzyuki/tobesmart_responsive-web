@@ -402,7 +402,8 @@ header.scrolled .hamburger span {
     padding: 40px 30px;
     border-radius: 20px;
     color: white;
-    min-height: 300px;
+    min-height: 390px;
+    /* Increased by 30% from 300px */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -414,7 +415,7 @@ header.scrolled .hamburger span {
 }
 
 .card-1 {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('images/unmanned_system.png');
+    background: url('images/unmanned_system.png');
     background-size: cover;
     background-position: center;
 }
