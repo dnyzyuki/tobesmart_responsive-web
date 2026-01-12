@@ -406,14 +406,29 @@ header.scrolled .hamburger span {
     background-position: center;
 }
 
-.video-bg {
+.animated-clouds {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 200%;
+    /* Wider to prevent gaps during animation */
     height: 100%;
-    object-fit: cover;
+    background-image: url('images/clouds_animated.png');
+    background-repeat: repeat-x;
+    background-size: cover;
     z-index: 1;
+    animation: flowClouds 60s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes flowClouds {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .video-overlay {
