@@ -418,6 +418,10 @@ header.scrolled .hamburger span {
     background: url('images/unmanned_system.png');
     background-size: cover;
     background-position: center;
+    justify-content: flex-start;
+    /* Align text to top */
+    padding-top: 60px;
+    /* Add a nice looking top margin */
 }
 
 .card-2 {
