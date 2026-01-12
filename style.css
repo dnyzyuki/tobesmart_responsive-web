@@ -414,7 +414,9 @@ header.scrolled .hamburger span {
 }
 
 .card-1 {
-    background-color: var(--card-1);
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('images/unmanned_system.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .card-2 {
@@ -767,7 +769,7 @@ footer {
     /* Center text without icons */
     background: #fff;
     padding: 12px 25px;
-    border-radius: 20px;
+    border-radius: 15px;
     text-decoration: none;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s;
