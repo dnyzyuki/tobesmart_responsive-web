@@ -109,7 +109,7 @@ nav {
     left: 50%;
     width: 0;
     height: 3px;
-    background-color: #246FF4;
+    background-color: var(--primary-color);
     /* Vibrant Blue */
     transition: all 0.3s ease;
     transform: translateX(-50%);
