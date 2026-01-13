@@ -25,24 +25,29 @@
                     <div class="mega-menu">
                         <div class="container mega-menu-inner">
                             <div class="mega-item">
-                                <i class="fas fa-store"></i>
-                                <h4>무인 운영 시스템</h4>
-                                <p>24시간 비대면 운영 효율 극대화</p>
+                                <i data-lucide="container"></i>
+                                <h4>스페이스큐브</h4>
+                                <p>공간 예약 및 출입 통제 솔루션</p>
                             </div>
                             <div class="mega-item">
-                                <i class="fas fa-user-shield"></i>
-                                <h4>스마트 출입 관리</h4>
-                                <p>안전하고 편리한 보안 솔루션</p>
+                                <i data-lucide="coins"></i>
+                                <h4>세일즈큐브</h4>
+                                <p>다양한 상품의 스마트 판매 및 결제</p>
                             </div>
                             <div class="mega-item">
-                                <i class="fas fa-desktop"></i>
-                                <h4>원격 제어 및 관리</h4>
-                                <p>언제 어디서나 실시간 매장 관리</p>
+                                <i data-lucide="sliders-horizontal"></i>
+                                <h4>컨트롤큐브</h4>
+                                <p>매장 시설 실시간 원격 제어</p>
                             </div>
                             <div class="mega-item">
-                                <i class="fas fa-credit-card"></i>
-                                <h4>통합 결제 시스템</h4>
-                                <p>다양한 결제 수단 한 번에 처리</p>
+                                <i data-lucide="smartphone"></i>
+                                <h4>모바일앱</h4>
+                                <p>고객 편의를 위한 전용 어플리케이션</p>
+                            </div>
+                            <div class="mega-item">
+                                <i data-lucide="monitor-cloud"></i>
+                                <h4>관리자웹</h4>
+                                <p>언제 어디서나 매장 현황 관리</p>
                             </div>
                         </div>
                     </div>
@@ -52,19 +57,24 @@
                     <div class="mega-menu">
                         <div class="container mega-menu-inner">
                             <div class="mega-item">
-                                <i class="fas fa-tablet-alt"></i>
-                                <h4>데스크형 키오스크</h4>
-                                <p>공간 활용도가 높은 소형 모델</p>
+                                <i data-lucide="tablet"></i>
+                                <h4>키오스크</h4>
+                                <p>다양한 환경에 최적화된 라인업</p>
                             </div>
                             <div class="mega-item">
-                                <i class="fas fa-window-maximize"></i>
-                                <h4>스탠드형 키오스크</h4>
-                                <p>시인성이 뛰어난 고급 수직형</p>
+                                <i data-lucide="accessibility"></i>
+                                <h4>배리어프리키오스크</h4>
+                                <p>누구나 편리하게 사용하는 접근성</p>
                             </div>
                             <div class="mega-item">
-                                <i class="fas fa-id-card"></i>
-                                <h4>카드 전용 단말기</h4>
-                                <p>빠르고 정확한 결제 하드웨어</p>
+                                <i data-lucide="sheet"></i>
+                                <h4>스마트자판기</h4>
+                                <p>24시간 자동 판매 시스템</p>
+                            </div>
+                            <div class="mega-item">
+                                <i data-lucide="dock"></i>
+                                <h4>테이블오더/POS</h4>
+                                <p>스마트한 주문 및 결제 관리</p>
                             </div>
                         </div>
                     </div>
@@ -74,12 +84,12 @@
                     <div class="mega-menu">
                         <div class="container mega-menu-inner">
                             <div class="mega-item">
-                                <i class="fas fa-building"></i>
+                                <i data-lucide="building-2"></i>
                                 <h4>회사개요</h4>
                                 <p>투비스마트의 발자취와 핵심 가치</p>
                             </div>
                             <div class="mega-item">
-                                <i class="fas fa-map-marker-alt"></i>
+                                <i data-lucide="map-pin"></i>
                                 <h4>오시는 길</h4>
                                 <p>방문 상담 및 고객 지원 안내</p>
                             </div>
@@ -208,7 +218,7 @@
             <div class="container">
                 <div class="section-title">
                     <h2>언제 어디서나 운영가능한<br>원격관리 솔루션</h2>
-                    <p>키오스크, POS, 테이블오더, 모바일앱, 관리자페이지까지<br>매장 운영에 필요한 모든 기능을 하나에 플랫폼에서 통합 원격 이용할 수 있습니다.</p>
+                    <p>키오스크, POS, 테이블오더, 모바일앱, 관리자페이지까지<br>매장 운영에 필요한 모든 기능을 통합 원격으로 이용할 수 있습니다.</p>
                 </div>
                 <div class="feature-icons">
                     <div class="icon-box">
@@ -390,6 +400,27 @@
 
         // Initialize Lucide Icons
         lucide.createIcons();
+
+        // Mobile Accordion Toggle
+        const dropdowns = document.querySelectorAll('.has-dropdown > a');
+        dropdowns.forEach(dropdown => {
+            dropdown.addEventListener('click', function (e) {
+                // Check if valid mobile view (using same breakpoint as CSS usually 768px)
+                if (window.innerWidth <= 768) {
+                    e.preventDefault(); // Prevent navigation
+                    const parent = this.parentElement;
+
+                    // Close other open menus (optional - mimic accordion behavior)
+                    document.querySelectorAll('.has-dropdown').forEach(item => {
+                        if (item !== parent) {
+                            item.classList.remove('active');
+                        }
+                    });
+
+                    parent.classList.toggle('active');
+                }
+            });
+        });
 
         // Hero Slider Logic
         let currentSlideIndex = 0;

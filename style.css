@@ -94,7 +94,7 @@ nav {
     text-decoration: none;
     color: var(--light-text);
     /* White Font */
-    font-weight: 600;
+    font-weight: 400;
     font-size: 16px;
     padding: 15px 0;
     position: relative;
@@ -158,16 +158,21 @@ nav {
     cursor: pointer;
 }
 
-.mega-item i {
+.mega-item i,
+.mega-item svg {
     font-size: 24px;
-    color: var(--primary-color);
-    margin-bottom: 15px;
+    width: 32px;
+    height: 32px;
+    color: #5E5E5E;
+    color: #5E5E5E;
+    margin-bottom: 3px;
+    stroke-width: 1.5px;
 }
 
 .mega-item h4 {
     font-size: 16px;
     color: #333;
-    margin-bottom: 8px;
+    margin-bottom: 3px;
     font-weight: 700;
 }
 
@@ -181,9 +186,14 @@ nav {
     color: var(--primary-color);
 }
 
+.mega-item:hover i,
+.mega-item:hover svg {
+    color: var(--primary-color);
+}
+
 /* Scrolled Header Adjustments */
 header.scrolled .nav-links a {
-    color: #333;
+    color: #fff;
 }
 
 header.scrolled .nav-links a::after {
@@ -279,9 +289,9 @@ header.scrolled .hamburger span {
 }
 
 .dot {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    border-radius: 5px;
     background: rgba(255, 255, 255, 0.4);
     cursor: pointer;
     transition: all 0.3s ease;
@@ -289,7 +299,8 @@ header.scrolled .hamburger span {
 
 .dot.active {
     background: #fff;
-    transform: scale(1.2);
+    width: 24px;
+    transform: none;
 }
 
 .hero-content {
@@ -417,7 +428,7 @@ header.scrolled .hamburger span {
     background-repeat: repeat-x;
     background-size: cover;
     z-index: 1;
-    animation: flowClouds 60s linear infinite;
+    animation: flowClouds 35s linear infinite;
     opacity: 0.8;
 }
 
@@ -781,12 +792,17 @@ footer {
         background-color: rgba(0, 0, 0, 0.85);
         width: 100%;
         height: 100vh;
-        text-align: center;
+        text-align: left;
         transition: 0.3s;
         padding-top: 40px;
         display: flex;
         /* Override display:none */
         z-index: 999;
+    }
+
+    /* Ensure text remains white on mobile even when scrolled */
+    header.scrolled .nav-links a {
+        color: #fff;
     }
 
     .nav-links.mobile-active {
@@ -800,11 +816,70 @@ footer {
     .nav-links a {
         font-size: 20px;
         color: #fff;
+        display: block;
+        padding-left: 30px;
+        /* Match sub-menu indent */
     }
 
-    .hero {
-        height: 60vh;
-        min-height: 400px;
+    /* Mobile Accordion Menu Styles */
+    .has-dropdown .mega-menu {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        padding: 0;
+        visibility: visible;
+        /* Always visible for animation control via opacity/height */
+        opacity: 1;
+        transform: none;
+        display: none;
+        /* Hidden by default */
+        background-color: rgba(61, 61, 61, 0.5);
+        /* Slightly lighter background */
+    }
+
+    .has-dropdown.active .mega-menu {
+        display: block;
+        /* Show when active */
+    }
+
+    .container.mega-menu-inner {
+        flex-direction: column;
+        padding: 0;
+        gap: 0;
+    }
+
+    .mega-item {
+        max-width: 100%;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .mega-item:last-child {
+        border-bottom: none;
+    }
+
+    .mega-item i,
+    .mega-item svg,
+    .mega-item p {
+        display: none;
+        /* Hide icons and descriptions on mobile */
+    }
+
+    .mega-item h4 {
+        color: #ddd;
+        font-size: 16px;
+        margin: 0;
+        padding: 15px 30px;
+        /* Indent sub-items */
+        font-weight: 500;
+        display: block;
+    }
+
+    .has-dropdown.active>a {
+        color: var(--primary-color);
+        /* Highlight parent link when open */
     }
 
     .hero h1 {
