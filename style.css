@@ -1403,3 +1403,82 @@ footer {
         }
     }
 }
+
+/* Stats Section Circles */
+.stats-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.stat-circle {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.stat-circle:hover {
+    transform: translateY(-10px);
+}
+
+.stat-circle h3 {
+    font-size: 40px;
+    /* Increased from 32px to match visual importance */
+    font-weight: 800;
+    /* Extra bold */
+    margin-bottom: 5px;
+    line-height: 1.1;
+}
+
+.stat-circle p {
+    font-size: 17px;
+    /* Slight increase */
+    font-weight: 500;
+    line-height: 1.3;
+    opacity: 1;
+    /* Fully opaque for better visibility */
+}
+
+.circle-gray {
+    background-color: #545454;
+    /* Dark Gray */
+}
+
+.circle-green {
+    background-color: #28a745;
+    /* Green */
+}
+
+.circle-blue {
+    background-color: #0088cc;
+    /* Blue */
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        gap: 20px;
+    }
+
+    .stat-circle {
+        width: 160px;
+        height: 160px;
+    }
+
+    .stat-circle h3 {
+        font-size: 24px;
+    }
+
+    .stat-circle p {
+        font-size: 14px;
+    }
+}
