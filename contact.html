@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상담신청 | TOBESMART</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo"><a href="index.html"><img src="images/logo_white.png" alt="TOBESMART"></a></div>
+            <ul class="nav-links">
+                <li class="has-dropdown">
+                    <a href="space_cube.html">서비스</a>
+                    <div class="mega-menu">
+                        <div class="container mega-menu-inner">
+                            <a href="space_cube.html" class="mega-item" style="text-decoration: none; display: block;">
+                                <i data-lucide="container"></i>
+                                <h4>스페이스큐브</h4>
+                                <p>공간 예약 및 출입 통제 솔루션</p>
+                            </a>
+                            <div class="mega-item">
+                                <i data-lucide="coins"></i>
+                                <h4>세일즈큐브</h4>
+                                <p>다양한 상품의 스마트 판매 및 결제</p>
+                            </div>
+                            <div class="mega-item">
+                                <i data-lucide="sliders-horizontal"></i>
+                                <h4>컨트롤큐브</h4>
+                                <p>매장 시설 실시간 원격 제어</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="has-dropdown">
+                    <a href="#">판매제품</a>
+                    <div class="mega-menu">
+                        <div class="container mega-menu-inner">
+                            <div class="mega-item">
+                                <i data-lucide="tablet"></i>
+                                <h4>키오스크</h4>
+                                <p>다양한 환경에 최적화된 라인업</p>
+                            </div>
+                            <div class="mega-item">
+                                <i data-lucide="accessibility"></i>
+                                <h4>배리어프리키오스크</h4>
+                                <p>누구나 편리하게 사용하는 접근성</p>
+                            </div>
+                            <div class="mega-item">
+                                <i data-lucide="sheet"></i>
+                                <h4>스마트자판기</h4>
+                                <p>24시간 자동 판매 시스템</p>
+                            </div>
+                            <div class="mega-item">
+                                <i data-lucide="dock"></i>
+                                <h4>테이블오더/POS</h4>
+                                <p>스마트한 주문 및 결제 관리</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="has-dropdown">
+                    <a href="about.html">회사소개</a>
+                    <div class="mega-menu">
+                        <div class="container mega-menu-inner">
+                            <a href="about.html" class="mega-item" style="text-decoration: none; display: block;">
+                                <i data-lucide="building-2"></i>
+                                <h4>회사개요</h4>
+                                <p>투비스마트의 발자취와 핵심 가치</p>
+                            </a>
+                            <div class="mega-item">
+                                <i data-lucide="map-pin"></i>
+                                <h4>오시는 길</h4>
+                                <p>방문 상담 및 고객 지원 안내</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="contact.html">상담신청</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="contact-hero">
+            <div class="hero-overlay"></div>
+            <div class="container relative">
+                <h1>상담신청</h1>
+            </div>
+        </section>
+
+        <!-- Form Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>문의 내용을 남겨주시면 <br>신속하게 연락드리겠습니다.</h2>
+                </div>
+
+                <div class="contact-container">
+                    <form action="#" method="POST" id="consultationForm" novalidate>
+                        <div class="form-group">
+                            <label for="name">업체/성함<span>*</span></label>
+                            <input type="text" id="name" name="name" class="form-control"
+                                placeholder="업체명 또는 성함을 입력해 주세요" required>
+                            <div class="error-text" id="nameError">업체/성함을 입력해 주세요.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">연락처<span>*</span></label>
+                            <input type="tel" id="phone" name="phone" class="form-control"
+                                placeholder="'-'를 제외한 숫자만 입력해 주세요." required>
+                            <div class="error-text" id="phoneError">연락처를 입력해 주세요.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">이메일<span>*</span></label>
+                            <input type="email" id="email" name="email" class="form-control"
+                                placeholder="이메일 주소를 입력해 주세요" required>
+                            <div class="error-text" id="emailError">이메일 주소를 입력해 주세요.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>상담유형 선택 (중복선택 가능)<span>*</span></label>
+                            <div class="checkbox-group">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="type" value="order">
+                                    <div class="custom-checkbox"></div>
+                                    <span>키오스크</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="type" value="kiosk">
+                                    <div class="custom-checkbox"></div>
+                                    <span>배리어프리 키오스크</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="type" value="pos">
+                                    <div class="custom-checkbox"></div>
+                                    <span>테이블오더/포스</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="type" value="ad">
+                                    <div class="custom-checkbox"></div>
+                                    <span>제휴</span>
+                                </label>
+                                <label class="checkbox-item">
+                                    <input type="checkbox" name="type" value="partner">
+                                    <div class="custom-checkbox"></div>
+                                    <span>기타</span>
+                                </label>
+                            </div>
+                            <div class="error-text" id="typeError">상담유형을 최소 하나 이상 선택해 주세요.</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">문의 내용</label>
+                            <textarea id="message" name="message" class="form-control"
+                                placeholder="문의하실 내용을 자유롭게 입력해 주세요"></textarea>
+                        </div>
+
+                        <div class="agreement-group">
+                            <div class="agreement-item-row">
+                                <label class="checkbox-item">
+                                    <input type="checkbox" id="mainSelectAll" required>
+                                    <div class="custom-checkbox"></div>
+                                </label>
+                                <span class="agreement-hub-link" onclick="openModal('unifiedAgreementModal')">이용약관
+                                    전체동의</span>
+                            </div>
+                            <div class="error-text" id="agreementError">필수 약관에 동의해 주세요.</div>
+                        </div>
+
+                        <button type="submit" class="submit-btn" id="submitBtn" style="margin-top: 20px;">상담
+                            신청하기</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Unified Agreement Modal -->
+        <div id="unifiedAgreementModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>개인정보 수집 및 이용약관 안내</h3>
+                </div>
+                <div class="modal-body">
+                    <!-- Total Agreement inside Modal -->
+                    <div class="modal-agreement-item no-accordion"
+                        style="border-bottom: 1px solid #f0f0f0; margin-bottom: 20px;">
+                        <div class="accordion-header">
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="modalSelectAll">
+                                <div class="custom-checkbox"></div>
+                                <span style="font-weight: 700; color: #111;">전체동의</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Privacy Agreement -->
+                    <div class="modal-agreement-item">
+                        <div class="accordion-header">
+                            <label class="checkbox-item">
+                                <input type="checkbox" class="sub-agree" id="modalPrivacy" required>
+                                <div class="custom-checkbox"></div>
+                                <span>개인정보 수집 동의 <span style="color: #ff4d4f;">*</span></span>
+                            </label>
+                            <i data-lucide="chevron-down" class="accordion-toggle" onclick="toggleAccordion(this)"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>(주)투비스마트는 귀하의 개인정보를 개인정보 보호법 제15조(개인정보수집·이용 동의)에 의거하여 안내드리니 확인하여 주시기 바랍니다.</p>
+                            <p><strong>• 개인정보 수집·이용 목적</strong><br>상담 문의 대응을 위한 연락 및 서비스 안내</p>
+                            <p><strong>• 수집하는 개인정보의 항목</strong><br>업체명, 성함, 연락처, 이메일</p>
+                            <p><strong>• 개인정보의 보유 및 이용 기간</strong><br>상담 응대 완료 후 1년간 보관</p>
+                        </div>
+                    </div>
+
+                    <!-- Marketing Agreement -->
+                    <div class="modal-agreement-item">
+                        <div class="accordion-header">
+                            <label class="checkbox-item">
+                                <input type="checkbox" class="sub-agree" id="modalMarketing">
+                                <div class="custom-checkbox"></div>
+                                <span>광고성 정보 수신동의</span>
+                            </label>
+                            <i data-lucide="chevron-down" class="accordion-toggle" onclick="toggleAccordion(this)"></i>
+                        </div>
+                        <div class="accordion-content">
+                            <p>신규 서비스 안내 및 이벤트 정보 제공 등 투비스마트의 소식을 전해드립니다.</p>
+                            <p><strong>• 수집 항목</strong>: 연락처, 이메일</p>
+                            <p><strong>• 이용 목적</strong>: 마케팅 및 광고 활용</p>
+                            <p>※ 동의를 거부하시더라도 상담 신청 및 서비스 이용에는 불이익이 없습니다.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="modal-btn btn-close"
+                        onclick="closeModal('unifiedAgreementModal')">닫기</button>
+                    <button type="button" class="modal-btn btn-agree" onclick="applyModalAgreements()">동의하기</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo"><img src="images/logo_white.png" alt="TOBESMART"></div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-info">
+                    <p>대표: 김광 I 주소: 경기도 성남시 중원구 둔촌대로 484 시콕스타워 116/117호</p>
+                    <p>전화: 1577-3119 I 팩스: 031-701-4119 I 이메일: tobesmart@tobesmart.co.kr</p>
+                    <p>COPYRIGHT(C) TOBESMART. ALL RIGHTS RESERVED.</p>
+                </div>
+                <div class="footer-contact">
+                    <p><strong>고객센터</strong></p>
+                    <p>전화 1577-3119 I 이메일 tobesmart@tobesmart.co.kr</p>
+                    <p>평일 09:00 ~ 18:00</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Form Submission logic
+        document.getElementById('consultationForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Clear previous errors
+            document.querySelectorAll('.form-group').forEach(group => group.classList.remove('has-error'));
+
+            const name = document.getElementById('name');
+            const phone = document.getElementById('phone');
+            const email = document.getElementById('email');
+            const typeCheckboxes = document.querySelectorAll('input[name="type"]:checked');
+            const modalPrivacy = document.getElementById('modalPrivacy');
+
+            let firstError = null;
+
+            // Validate Name
+            if (!name.value.trim()) {
+                name.closest('.form-group').classList.add('has-error');
+                if (!firstError) firstError = "업체/성함을 입력해 주세요.";
+            }
+
+            // Validate Phone
+            if (!phone.value.trim()) {
+                phone.closest('.form-group').classList.add('has-error');
+                if (!firstError) firstError = "연락처를 입력해 주세요.";
+            }
+
+            // Validate Email
+            if (!email.value.trim()) {
+                email.closest('.form-group').classList.add('has-error');
+                if (!firstError) firstError = "이메일 주소를 입력해 주세요.";
+            }
+
+            // Validate Type
+            if (typeCheckboxes.length === 0) {
+                document.getElementById('typeError').closest('.form-group').classList.add('has-error');
+                if (!firstError) firstError = "상담유형을 최소 하나 이상 선택해 주세요.";
+            }
+
+            // Validate Agreement
+            if (!modalPrivacy.checked) {
+                document.getElementById('agreementError').closest('.form-group').classList.add('has-error');
+                if (!firstError) firstError = "필수 약관에 동의해 주세요.";
+            }
+
+            if (firstError) {
+                alert(firstError);
+                return;
+            }
+
+            alert('상담 신청이 완료되었습니다. 담당자가 빠른 시일 내에 연락드리겠습니다.');
+            this.reset();
+            document.getElementById('mainSelectAll').checked = false;
+        });
+
+        // Unified Modal & Select All Logic
+        const modalSelectAll = document.getElementById('modalSelectAll');
+        const subAgrees = document.querySelectorAll('.sub-agree');
+        const mainSelectAll = document.getElementById('mainSelectAll');
+
+        // Main select all on the form
+        mainSelectAll.addEventListener('change', function (e) {
+            // Only toggle sub-agrees if checked from main form
+            const isChecked = this.checked;
+            modalSelectAll.checked = isChecked;
+            subAgrees.forEach(cb => {
+                cb.checked = isChecked;
+            });
+        });
+
+        // Modal Select All
+        modalSelectAll.addEventListener('change', function () {
+            subAgrees.forEach(cb => {
+                cb.checked = modalSelectAll.checked;
+            });
+        });
+
+        subAgrees.forEach(cb => {
+            cb.addEventListener('change', () => {
+                const allChecked = Array.from(subAgrees).every(c => c.checked);
+                modalSelectAll.checked = allChecked;
+            });
+        });
+
+        function applyModalAgreements() {
+            const allChecked = Array.from(subAgrees).every(c => c.checked);
+            const privacyChecked = document.getElementById('modalPrivacy').checked;
+
+            if (privacyChecked) {
+                // If at least mandatory is checked, we "sync" to the main checkbox 
+                // Note: Logic depends on how strict we want the main checkbox to be.
+                mainSelectAll.checked = allChecked;
+                closeModal('unifiedAgreementModal');
+            } else {
+                alert('개인정보 수집 동의(필수) 항목에 동의해 주세요.');
+            }
+        }
+
+        // Accordion Logic
+        function toggleAccordion(el) {
+            const item = el.closest('.modal-agreement-item');
+            item.classList.toggle('active');
+        }
+
+        // Generic Modal Logic
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+            document.body.style.overflow = 'hidden';
+            lucide.createIcons(); // Re-init icons in case of dynamic content
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            if (event.target.classList.contains('modal')) {
+                closeModal(event.target.id);
+            }
+        }
+    </script>
+</body>
+
+</html>

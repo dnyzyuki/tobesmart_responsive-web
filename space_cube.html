@@ -11,36 +11,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        /* Page Specific Overrides to match Index Tone */
-        .sub-hero {
-            height: 60vh;
-            min-height: 400px;
-            background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-        }
-
-        .sub-hero .hero-overlay {
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        .sub-hero h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-        }
-
-        .sub-hero p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
         /* Section spacing matching index.html */
         section {
             padding: 80px 0;
@@ -204,14 +174,14 @@
                     </div>
                 </li>
                 <li class="has-dropdown">
-                    <a href="#">회사소개</a>
+                    <a href="about.html">회사소개</a>
                     <div class="mega-menu">
                         <div class="container mega-menu-inner">
-                            <div class="mega-item">
+                            <a href="about.html" class="mega-item" style="text-decoration: none; display: block;">
                                 <i data-lucide="building-2"></i>
                                 <h4>회사개요</h4>
                                 <p>투비스마트의 발자취와 핵심 가치</p>
-                            </div>
+                            </a>
                             <div class="mega-item">
                                 <i data-lucide="map-pin"></i>
                                 <h4>오시는 길</h4>
@@ -220,7 +190,7 @@
                         </div>
                     </div>
                 </li>
-                <li><a href="#">상담신청</a></li>
+                <li><a href="contact.html">상담신청</a></li>
             </ul>
             <div class="hamburger">
                 <span></span>
