@@ -655,17 +655,14 @@ header.scrolled .hamburger span {
 .section-title h2 {
     font-size: 36px;
     font-weight: 600;
-    /* Further reduced from 700 */
     margin-bottom: 20px;
     line-height: 1.35;
-    /* Increased from 1.1 to 1.35 for better readability */
-    color: #333;
-    /* Matching the design's dark text on sky */
+    color: var(--text-main);
 }
 
 .section-title p {
     font-size: 18px;
-    color: #555;
+    color: var(--text-muted);
     max-width: 700px;
     margin: 0 auto;
 }
@@ -702,7 +699,7 @@ header.scrolled .hamburger span {
 .icon-box p {
     font-weight: 700;
     font-size: 18px;
-    color: #333;
+    color: var(--text-main);
     line-height: 1.32;
     /* Increased to 110% of previous 1.2 */
 }
@@ -1245,7 +1242,7 @@ footer {
     display: block;
     font-size: 18px;
     /* Matched with phone number size */
-    color: #333;
+    color: var(--text-main);
     font-weight: 400;
     /* Keep regular weight as requested */
 }
@@ -1254,7 +1251,7 @@ footer {
     display: block;
     font-size: 18px;
     font-weight: 700;
-    color: #333;
+    color: var(--text-main);
 }
 
 .sky-text {
@@ -1290,7 +1287,7 @@ footer {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: #333;
+    color: var(--text-main);
     font-size: 11px;
     font-weight: 700;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -1369,12 +1366,16 @@ footer {
         font-size: 2.5rem;
         margin-bottom: 20px;
         font-weight: 700;
-        color: #333;
+        color: var(--text-main);
+    }
+
+    .space-intro h2 span {
+        color: var(--text-muted);
     }
 
     .space-intro p {
         font-size: 1.2rem;
-        color: #666;
+        color: var(--text-muted);
         line-height: 1.6;
     }
 
@@ -1460,18 +1461,22 @@ footer {
     .feature-box h3 {
         font-size: 1.3rem;
         margin-bottom: 15px;
-        color: #333;
+        color: var(--text-main);
     }
 
     .feature-box ul {
         list-style: none;
         padding: 0;
-        color: #666;
+        color: var(--text-muted);
     }
 
     .feature-box ul li {
         margin-bottom: 8px;
         font-size: 0.95rem;
+    }
+
+    .feature-box p {
+        color: var(--text-muted);
     }
 
     /* Previews (Admin/App) */
@@ -1755,7 +1760,7 @@ footer {
     gap: 30px;
     font-size: 21px;
     /* Increased by 30% from base 16px */
-    color: #333;
+    color: var(--text-main);
 }
 
 .history-detail:last-child {
@@ -1764,7 +1769,7 @@ footer {
 
 .history-month {
     font-weight: 400;
-    color: #333;
+    color: var(--text-main);
     min-width: 50px;
 }
 
@@ -1827,7 +1832,7 @@ footer {
 .ip-table td {
     padding: 20px 0;
     font-size: 21px;
-    color: #333;
+    color: var(--text-main);
     border-bottom: 1px solid #f0f0f0;
     vertical-align: middle;
 }
@@ -1872,6 +1877,7 @@ footer {
 }
 
 .contact-section .section-title h2 {
+    color: var(--text-main);
     margin-bottom: 10px;
 }
 
