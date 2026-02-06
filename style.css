@@ -432,6 +432,7 @@ header.scrolled .hamburger span {
 .about-hero {
     height: 80vh;
     min-height: 600px;
+    background-color: #1a1a1a;
     position: relative;
     display: flex;
     align-items: center;
