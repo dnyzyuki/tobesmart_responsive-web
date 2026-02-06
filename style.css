@@ -405,7 +405,7 @@ header.scrolled .hamburger span {
 .sub-hero h1,
 .about-hero h1,
 .contact-hero h1 {
-    font-size: 52px;
+    font-size: 48px;
     /* Increased from 42px */
     font-weight: 800;
     /* Increased for more impact */
@@ -432,7 +432,8 @@ header.scrolled .hamburger span {
 
 /* Sub Hero and About Hero Layouts */
 .sub-hero,
-.about-hero {
+.about-hero,
+.contact-hero {
     height: 80vh;
     min-height: 600px;
     background-size: cover;
@@ -454,6 +455,10 @@ header.scrolled .hamburger span {
     background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2000&auto=format&fit=crop');
 }
 
+.contact-hero {
+    background-image: url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2000&auto=format&fit=crop');
+}
+
 /* Hero Video Background */
 .hero-video {
     position: absolute;
@@ -469,7 +474,8 @@ header.scrolled .hamburger span {
 }
 
 .sub-hero .hero-overlay,
-.about-hero .hero-overlay {
+.about-hero .hero-overlay,
+.contact-hero .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -675,7 +681,7 @@ header.scrolled .hamburger span {
 }
 
 .section-title h2 {
-    font-size: 36px;
+    font-size: 30px;
     font-weight: 600;
     margin-bottom: 20px;
     line-height: 1.35;
@@ -2282,4 +2288,38 @@ textarea.form-control {
         padding: 20px;
         gap: 10px;
     }
+}
+
+/* About Page Intro Logo Toggle */
+.intro-logo .intro-logo-white {
+    display: none;
+}
+
+.intro-logo .intro-logo-color {
+    display: block;
+}
+
+[data-theme='dark'] .intro-logo .intro-logo-white {
+    display: block;
+}
+
+[data-theme='dark'] .intro-logo .intro-logo-color {
+    display: none;
+}
+
+/* Space Cube Intro Image Toggle */
+.intro-logo .intro-logo-light {
+    display: none;
+}
+
+.intro-logo .intro-logo-dark {
+    display: inline-block;
+}
+
+[data-theme='dark'] .intro-logo .intro-logo-light {
+    display: inline-block;
+}
+
+[data-theme='dark'] .intro-logo .intro-logo-dark {
+    display: none;
 }
