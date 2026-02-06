@@ -403,20 +403,23 @@ header.scrolled .hamburger span {
 /* Unified Hero Typography */
 .hero h1,
 .sub-hero h1,
-.about-hero h1 {
+.about-hero h1,
+.contact-hero h1 {
     font-size: 52px;
     /* Increased from 42px */
     font-weight: 800;
     /* Increased for more impact */
     margin-bottom: 25px;
     line-height: 1.2;
+    color: #ffffff !important;
     text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     letter-spacing: -0.02em;
 }
 
 .hero h1 span,
 .sub-hero h1 span,
-.about-hero h1 span {
+.about-hero h1 span,
+.contact-hero h1 span {
     font-size: inherit;
     font-weight: inherit;
 }
@@ -2056,6 +2059,7 @@ textarea.form-control {
     justify-content: center;
     text-align: center;
     color: #fff;
+    overflow: hidden;
 }
 
 .contact-hero .hero-overlay {
