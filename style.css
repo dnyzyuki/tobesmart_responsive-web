@@ -643,6 +643,13 @@ header.scrolled .hamburger span {
     z-index: 3;
 }
 
+/* Force dark text color for Remote Management section even in dark mode */
+.remote-management .section-title h2,
+.remote-management .section-title p,
+.remote-management .icon-box p {
+    color: #333 !important;
+}
+
 .section-title {
     margin-bottom: 60px;
     text-align: center;
