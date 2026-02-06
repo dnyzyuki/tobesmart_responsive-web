@@ -595,7 +595,7 @@ header.scrolled .hamburger span {
     text-align: center;
     position: relative;
     overflow: hidden;
-    color: var(--text-main);
+    color: #333;
     background-image: url('images/sky_bg.png');
     /* Fallback image */
     background-size: cover;
@@ -636,10 +636,6 @@ header.scrolled .hamburger span {
     background-color: rgba(255, 255, 255, 0.4);
     /* Subtle overlay for text contrast */
     z-index: 2;
-}
-
-[data-theme="dark"] .video-overlay {
-    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .remote-management .container {
