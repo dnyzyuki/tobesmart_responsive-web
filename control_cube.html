@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>투비스마트 - 스페이스큐브</title>
+    <title>투비스마트 - 컨트롤큐브</title>
     <link rel="stylesheet" as="style" crossorigin
         href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <link rel="stylesheet" href="style.css">
@@ -57,63 +57,9 @@
             line-height: 1.5;
         }
 
-        /* Split Section (Image Left, Text Right) */
-        .split-section {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .split-img {
-            flex: 1;
-        }
-
-        .split-img img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .split-text {
-            flex: 1;
-        }
-
-        .split-text h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: var(--text-main);
-        }
-
-        .split-text p {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-            margin-bottom: 30px;
-        }
-
-        .check-list {
-            list-style: none;
-        }
-
-        .check-list li {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            font-size: 1.05rem;
-        }
-
-        .check-list li i {
-            color: var(--primary-color);
-            margin-right: 15px;
-        }
-
         @media (max-width: 768px) {
             .feature-grid {
                 grid-template-columns: repeat(2, 1fr);
-            }
-
-            .split-section {
-                flex-direction: column;
             }
         }
     </style>
@@ -208,113 +154,79 @@
     </header>
 
     <main>
-        <!-- Similar Hero to Index -->
+        <!-- Service Hero -->
         <section class="sub-hero">
             <div class="hero-overlay"></div>
             <div class="container relative reveal" style="z-index: 2;">
-                <img src="images/space_cube.png" alt="Space Cube"
+                <img src="images/control_cube.png" alt="Control Cube"
                     style="max-width: 260px; height: auto; margin-bottom: 30px; display: inline-block;">
-                <h1>모든 공간이 수익이 되는<br>
-                    올인원 무인 자동화 솔루션</h1>
+                <h1>기기를 다루는 공간, <br>
+                    기술로 완성하는 무인 제어 인프라</h1>
             </div>
         </section>
 
         <!-- Intro / Overview -->
         <section class="container" style="text-align: center; padding-top: 100px; padding-bottom: 80px;">
-
-
             <div class="section-title" style="margin-bottom: 60px;">
                 <h2 style="line-height: 1.5;">
-                    스터디카페, 독서실, 공유오피스, 체육시설 등<br>
-                    공간과 시간을 판매하는 업종에 <br>특화된 서비스를 제공합니다.
+                    매장의 출입문, 조명, 냉난방기 등 각종 시설물을<br>
+                    언제 어디서나 실시간으로 원격 제어하여<br>운영 효율을 극대화하는 솔루션입니다.
                 </h2>
             </div>
 
             <div class="feature-image" style="margin-top: 50px;">
-                <img src="images/space_areas.png" alt="Key Features"
-                    style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                <!-- Using clouds_animated as a metaphor for cloud-based control -->
+                <img src="images/clouds_animated.png" alt="Remote Control System"
+                    style="max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 15px;">
             </div>
         </section>
 
-        <!-- Feature 1: Admin Web -->
-        <section>
-            <div class="container text-center">
-                <div class="section-title" style="margin-bottom: 50px;">
-                    <h2 style="word-break: keep-all;">공간 관리 사업에 꼭 필요한 서비스와 원격 제어,<br>스페이스큐브는 모두
-                        가능합니다.</h2>
-                </div>
-                <img src="images/feature_detail_1.png" alt="Detailed Features"
-                    style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
-            </div>
-        </section>
-
-
-
-        <!-- Comparison / Benefits -->
+        <!-- Features Grid -->
         <section class="bg-gray">
             <div class="container text-center">
-                <div class="section-title" style="margin-bottom: 40px;">
-                    <h2>
-                        언제 어디서든 편리한 매장 관리<br>
-                        통합관리자 시스템
-                    </h2>
+                <div class="section-title" style="margin-bottom: 50px;">
+                    <h2 style="word-break: keep-all;">무인 매장 운영을 위한<br>컨트롤큐브의 스마트 제어 기능</h2>
                 </div>
-
-                <div class="keyword-list"
-                    style="margin-bottom: 40px; display: flex; flex-wrap: wrap; justify-content: center; gap: 15px 30px; font-size: 1.1rem; color: var(--text-main); font-weight: 500;">
-                    <span>좌석 예약/취소</span>
-                    <span>출입문/조명 제어</span>
-                    <span>사물함 현황</span>
-                    <span>사물함 종료 알림</span>
-                    <span>쿠폰/프로모션</span>
-                    <span>다양한 결제수단</span>
-                    <span>매출 현황</span>
-                    <span>좌석현황</span>
-                </div>
-
-                <div class="system-image" style="display: flex; gap: 15px; justify-content: center; margin-top: 40px;">
-                    <div style="flex: 1;">
-                        <img src="images/admin01.png" alt="Admin Screen 1"
-                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-door-open fa-3x"></i>
+                        <h3>출입문 원격 제어</h3>
+                        <p>애플리케이션을 통해 전국의 모든 매장<br>출입문을 원격으로 열고 닫을 수 있습니다.</p>
                     </div>
-                    <div style="flex: 1;">
-                        <img src="images/admin02.png" alt="Admin Screen 2"
-                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <div class="feature-item">
+                        <i class="fas fa-lightbulb fa-3x"></i>
+                        <h3>조명 및 에너지 관리</h3>
+                        <p>영업 시간에 맞춰 자동으로 조명을 켜고 끄며<br>냉난방기를 조절해 에너지를 절감합니다.</p>
                     </div>
-                    <div style="flex: 1;">
-                        <img src="images/admin03.png" alt="Admin Screen 3"
-                            style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    <div class="feature-item">
+                        <i class="fas fa-video fa-3x"></i>
+                        <h3>실시간 상태 모니터링</h3>
+                        <p>매장 내 기기들의 작동 상태를<br>실시간으로 감지하고 이상 발생 시 알림을 보냅니다.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-mobile-alt fa-3x"></i>
+                        <h3>모바일 통합 제어</h3>
+                        <p>현장에 방문하지 않아도 스마트폰 하나로<br>매장의 모든 환경을 제어할 수 있습니다.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Mobile App Section -->
+        <!-- Showcase -->
         <section>
             <div class="container text-center">
                 <div class="section-title" style="margin-bottom: 50px; margin-top: 100px;">
-                    <h2>쉽고 편리한 모바일 앱으로<br>고객 만족도를 높이세요.</h2>
+                    <h2>단 하나의 앱으로 누리는<br>완벽한 원격 매장 관리</h2>
                 </div>
-                <img src="images/mobile_app_screens.png" alt="Space Cube Mobile App Screens"
-                    style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                <img src="images/admin01.png" alt="Control Interface"
+                    style="max-width: 100%; height: auto; display: block; margin: 0 auto; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
             </div>
         </section>
 
-        <!-- Service Process Section -->
-        <section>
-            <div class="container text-center">
-                <div class="section-title" style="margin-bottom: 50px;">
-                    <h2>비용·시간 down 효율성 up<br>스페이스큐브는 이렇게 서비스 됩니다.</h2>
-                </div>
-                <img src="images/service_process.png" alt="Service Process Flow"
-                    style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
-            </div>
-        </section>
-
-        <!-- Stats Section -->
+        <!-- Stats Section (Same as space_cube for consistency) -->
         <section class="container" style="padding: 100px 20px;">
             <div class="section-title" style="margin-bottom: 60px;">
-                <h2>고객님과 함께 성장한 스페이스큐브<br>수많은 프랜차이즈, 매장에서 이용 중입니다.</h2>
+                <h2>투비스마트와 함께라면<br>무인 매장 운영이 더 쉬워집니다.</h2>
             </div>
             <div class="stats-grid">
                 <div class="stat-circle circle-gray">
@@ -335,18 +247,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Gallery / References -->
-        <section class="container" style="padding-bottom: 150px; padding-top: 150px;">
-            <div class="section-title">
-                <h2>1,500개 이상의 매장, 지자체와<br>다양한 프리미엄 브랜드에서 선택한 키오스크</h2>
-            </div>
-            <div class="installation-image" style="text-align: center; margin-top: 40px;">
-                <img src="images/installation_cases.jpg" alt="Installation Cases"
-                    style="max-width: 100%; height: auto; border-radius: 10px;">
-            </div>
-        </section>
-
 
     </main>
 
@@ -410,20 +310,6 @@
 
         lucide.createIcons();
 
-        const dropdowns = document.querySelectorAll('.has-dropdown > a');
-        dropdowns.forEach(dropdown => {
-            dropdown.addEventListener('click', function (e) {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    const parent = this.parentElement;
-                    document.querySelectorAll('.has-dropdown').forEach(item => {
-                        if (item !== parent) item.classList.remove('active');
-                    });
-                    parent.classList.toggle('active');
-                }
-            });
-        });
-
         // Theme Toggle Logic
         const themeToggle = document.getElementById('theme-toggle');
         const currentTheme = localStorage.getItem('theme') || 'light';
@@ -440,7 +326,6 @@
             }
         });
 
-        // Scroll Reveal Animation (Intersection Observer)
         const observerOptions = { threshold: 0.1 };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
