@@ -466,15 +466,15 @@ header.scrolled .hamburger span {
 }
 
 .space-hero {
-    background-image: url('https://plus.unsplash.com/premium_photo-1723823036326-075a2ec87fc4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dq=80&w=2000&auto=format&fit=crop');
+    background-image: url('https://plus.unsplash.com/premium_photo-1723823036326-075a2ec87fc4?q=80&w=2000&auto=format&fit=crop');
 }
 
 .sales-hero {
-    background-image: url('https://images.unsplash.com/photo-1571854003494-ab1b14c21249?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dq=80&w=2000&auto=format&fit=crop');
+    background-image: url('https://images.unsplash.com/photo-1571854003494-ab1b14c21249?q=80&w=1470&auto=format&fit=crop');
 }
 
 .control-hero {
-    background-image: url('https://images.unsplash.com/photo-1605164599901-f8a1464a2c87?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dq=80&w=2000&auto=format&fit=crop');
+    background-image: url('https://images.unsplash.com/photo-1605164599901-f8a1464a2c87?q=80&w=1470&auto=format&fit=crop');
 }
 
 .about-hero {
@@ -482,7 +482,7 @@ header.scrolled .hamburger span {
 }
 
 .contact-hero {
-    background-image: url('https://images.unsplash.com/photo-1540492070870-891ac4f02e99?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dq=100&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dq=80&w=2000&auto=format&fit=crop');
+    background-image: url('https://images.unsplash.com/photo-1540492070870-891ac4f02e99?q=100&w=2000&auto=format&fit=crop');
 }
 
 /* Hero Video Background */
