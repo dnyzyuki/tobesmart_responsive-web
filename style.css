@@ -1076,25 +1076,17 @@ footer {
         /* Match sub-menu indent */
     }
 
-    /* Mobile Accordion Menu Styles */
     .has-dropdown .mega-menu {
         position: static;
         width: 100%;
         box-shadow: none;
         padding: 0;
         visibility: visible;
-        /* Always visible for animation control via opacity/height */
         opacity: 1;
         transform: none;
-        display: none;
-        /* Hidden by default */
-        background-color: rgba(61, 61, 61, 0.5);
-        /* Slightly lighter background */
-    }
-
-    .has-dropdown.active .mega-menu {
         display: block;
-        /* Show when active */
+        /* Shown by default - modified from none */
+        background-color: rgba(61, 61, 61, 0.5);
     }
 
     .container.mega-menu-inner {

@@ -307,19 +307,7 @@
 
         lucide.createIcons();
 
-        const dropdowns = document.querySelectorAll('.has-dropdown > a');
-        dropdowns.forEach(dropdown => {
-            dropdown.addEventListener('click', function (e) {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    const parent = this.parentElement;
-                    document.querySelectorAll('.has-dropdown').forEach(item => {
-                        if (item !== parent) item.classList.remove('active');
-                    });
-                    parent.classList.toggle('active');
-                }
-            });
-        });
+        // Mobile sub-menus are now always open in CSS, so no toggle logic needed here.
 
         // Theme Toggle Logic
         const themeToggle = document.getElementById('theme-toggle');

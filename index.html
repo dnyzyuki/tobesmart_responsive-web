@@ -230,7 +230,7 @@
             <div class="container">
                 <div class="section-title">
                     <h2>언제 어디서나 운영가능한<br>원격관리 솔루션</h2>
-                    <p>키오스크, POS, 테이블오더, 모바일앱, 관리자페이지까지<br>매장 운영에 필요한 모든 기능을 통합 원격으로 이용할 수 있습니다.</p>
+                    <p>키오스크, 모바일앱, 관리자페이지까지<br>매장 운영에 필요한 모든 기능을<br>원격으로 통합 관리할 수 있습니다.</p>
                 </div>
                 <div class="feature-icons">
                     <div class="icon-box">
@@ -419,22 +419,7 @@
         // Initialize Lucide Icons
         lucide.createIcons();
 
-        // Mobile Accordion Toggle
-        const dropdowns = document.querySelectorAll('.has-dropdown > a');
-        dropdowns.forEach(dropdown => {
-            dropdown.addEventListener('click', function (e) {
-                if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    const parent = this.parentElement;
-                    document.querySelectorAll('.has-dropdown').forEach(item => {
-                        if (item !== parent) {
-                            item.classList.remove('active');
-                        }
-                    });
-                    parent.classList.toggle('active');
-                }
-            });
-        });
+        // Mobile sub-menus are now always open in CSS, so no toggle logic needed here.
 
         // Hero Slider Logic
         let currentSlideIndex = 0;
