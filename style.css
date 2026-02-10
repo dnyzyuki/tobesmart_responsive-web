@@ -59,6 +59,10 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+section {
+    padding: 100px 0;
+}
+
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
@@ -448,7 +452,29 @@ header.scrolled .hamburger span {
 }
 
 .sub-hero {
-    background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop');
+    height: 80vh;
+    min-height: 600px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.space-hero {
+    background-image: url('https://plus.unsplash.com/premium_photo-1723823036326-075a2ec87fc4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dq=80&w=2000&auto=format&fit=crop');
+}
+
+.sales-hero {
+    background-image: url('https://images.unsplash.com/photo-1571854003494-ab1b14c21249?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dq=80&w=2000&auto=format&fit=crop');
+}
+
+.control-hero {
+    background-image: url('https://images.unsplash.com/photo-1605164599901-f8a1464a2c87?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dq=80&w=2000&auto=format&fit=crop');
 }
 
 .about-hero {
@@ -456,7 +482,7 @@ header.scrolled .hamburger span {
 }
 
 .contact-hero {
-    background-image: url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=2000&auto=format&fit=crop');
+    background-image: url('https://images.unsplash.com/photo-1540492070870-891ac4f02e99?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dq=100&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dq=80&w=2000&auto=format&fit=crop');
 }
 
 /* Hero Video Background */
@@ -677,7 +703,6 @@ header.scrolled .hamburger span {
 .section-title {
     margin-bottom: 60px;
     text-align: center;
-    /* Center align all section titles */
 }
 
 .section-title h2 {
@@ -2055,31 +2080,6 @@ textarea.form-control {
     background-color: #0077b3;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 136, 203, 0.3);
-}
-
-.contact-hero {
-    height: 80vh;
-    min-height: 600px;
-    background-image: url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2000&auto=format&fit=crop');
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: #fff;
-    overflow: hidden;
-}
-
-.contact-hero .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
 }
 
 

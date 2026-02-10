@@ -10,113 +10,6 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        /* Section spacing matching index.html */
-        section {
-            padding: 80px 0;
-        }
-
-        .bg-gray {
-            background-color: var(--gray-bg);
-        }
-
-        /* Feature List using Index style icons */
-        .feature-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .feature-item {
-            background: var(--surface-color);
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px var(--card-shadow);
-            text-align: center;
-            transition: transform 0.3s;
-        }
-
-        .feature-item:hover {
-            transform: translateY(-5px);
-        }
-
-        .feature-item i {
-            color: var(--primary-color);
-            margin-bottom: 20px;
-        }
-
-        .feature-item h3 {
-            margin-bottom: 10px;
-            color: var(--text-main);
-        }
-
-        .feature-item p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            line-height: 1.5;
-        }
-
-        /* Split Section (Image Left, Text Right) */
-        .split-section {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-
-        .split-img {
-            flex: 1;
-        }
-
-        .split-img img {
-            width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .split-text {
-            flex: 1;
-        }
-
-        .split-text h3 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: var(--text-main);
-        }
-
-        .split-text p {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            line-height: 1.7;
-            margin-bottom: 30px;
-        }
-
-        .check-list {
-            list-style: none;
-        }
-
-        .check-list li {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            font-size: 1.05rem;
-        }
-
-        .check-list li i {
-            color: var(--primary-color);
-            margin-right: 15px;
-        }
-
-        @media (max-width: 768px) {
-            .feature-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .split-section {
-                flex-direction: column;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -147,7 +40,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="has-dropdown">
+                <!-- <li class="has-dropdown">
                     <a href="#">판매제품</a>
                     <div class="mega-menu">
                         <div class="container mega-menu-inner">
@@ -173,7 +66,7 @@
                             </div>
                         </div>
                     </div>
-                </li>
+                </li> -->
                 <li class="has-dropdown">
                     <a href="about.html">회사소개</a>
                     <div class="mega-menu">
@@ -183,11 +76,12 @@
                                 <h4>회사개요</h4>
                                 <p>투비스마트의 발자취와 핵심 가치</p>
                             </a>
-                            <div class="mega-item">
+                            <a href="about.html#location" class="mega-item"
+                                style="text-decoration: none; display: block;">
                                 <i data-lucide="map-pin"></i>
                                 <h4>오시는 길</h4>
                                 <p>방문 상담 및 고객 지원 안내</p>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </li>
@@ -209,7 +103,7 @@
 
     <main>
         <!-- Similar Hero to Index -->
-        <section class="sub-hero">
+        <section class="sub-hero space-hero">
             <div class="hero-overlay"></div>
             <div class="container relative reveal" style="z-index: 2;">
                 <img src="images/space_cube.png" alt="Space Cube"
@@ -220,20 +114,21 @@
         </section>
 
         <!-- Intro / Overview -->
-        <section class="container" style="text-align: center; padding-top: 100px; padding-bottom: 80px;">
+        <section>
+            <div class="container text-center">
 
 
-            <div class="section-title" style="margin-bottom: 60px;">
-                <h2 style="line-height: 1.5;">
-                    스터디카페, 독서실, 공유오피스, 체육시설 등<br>
-                    공간과 시간을 판매하는 업종에 <br>특화된 서비스를 제공합니다.
-                </h2>
-            </div>
+                <div class="section-title" style="margin-bottom: 60px;">
+                    <h2 style="line-height: 1.5;">
+                        스터디카페, 독서실, 공유오피스, 체육시설 등<br>
+                        공간과 시간을 판매하는 업종에 <br>특화된 서비스를 제공합니다.
+                    </h2>
+                </div>
 
-            <div class="feature-image" style="margin-top: 50px;">
-                <img src="images/space_areas.png" alt="Key Features"
-                    style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
-            </div>
+                <div class="feature-image">
+                    <img src="images/space_areas.png" alt="Key Features"
+                        style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                </div>
         </section>
 
         <!-- Feature 1: Admin Web -->
@@ -253,7 +148,7 @@
         <!-- Comparison / Benefits -->
         <section class="bg-gray">
             <div class="container text-center">
-                <div class="section-title" style="margin-bottom: 40px;">
+                <div class="section-title">
                     <h2>
                         언제 어디서든 편리한 매장 관리<br>
                         통합관리자 시스템
@@ -292,7 +187,7 @@
         <!-- Mobile App Section -->
         <section>
             <div class="container text-center">
-                <div class="section-title" style="margin-bottom: 50px; margin-top: 100px;">
+                <div class="section-title">
                     <h2>쉽고 편리한 모바일 앱으로<br>고객 만족도를 높이세요.</h2>
                 </div>
                 <img src="images/mobile_app_screens.png" alt="Space Cube Mobile App Screens"
@@ -312,39 +207,41 @@
         </section>
 
         <!-- Stats Section -->
-        <section class="container" style="padding: 100px 20px;">
-            <div class="section-title" style="margin-bottom: 60px;">
-                <h2>고객님과 함께 성장한 스페이스큐브<br>수많은 프랜차이즈, 매장에서 이용 중입니다.</h2>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-circle circle-gray">
-                    <h3>1,500+</h3>
-                    <p>전국 매장 수</p>
+        <section>
+            <div class="container">
+                <div class="section-title">
+                    <h2>고객님과 함께 성장한 스페이스큐브<br>수많은 프랜차이즈, 매장에서 이용 중입니다.</h2>
                 </div>
-                <div class="stat-circle circle-green">
-                    <h3>약 70+</h3>
-                    <p>프랜차이즈</p>
+                <div class="stats-grid">
+                    <div class="stat-circle circle-gray">
+                        <h3>1,500+</h3>
+                        <p>전국 매장 수</p>
+                    </div>
+                    <div class="stat-circle circle-green">
+                        <h3>약 70+</h3>
+                        <p>프랜차이즈</p>
+                    </div>
+                    <div class="stat-circle circle-gray">
+                        <h3>120만+</h3>
+                        <p>이용회원</p>
+                    </div>
+                    <div class="stat-circle circle-blue">
+                        <h3>365일</h3>
+                        <p>안정적인<br>클라우드 시스템</p>
+                    </div>
                 </div>
-                <div class="stat-circle circle-gray">
-                    <h3>120만+</h3>
-                    <p>이용회원</p>
-                </div>
-                <div class="stat-circle circle-blue">
-                    <h3>365일</h3>
-                    <p>안정적인<br>클라우드 시스템</p>
-                </div>
-            </div>
         </section>
 
         <!-- Gallery / References -->
-        <section class="container" style="padding-bottom: 150px; padding-top: 150px;">
-            <div class="section-title">
-                <h2>1,500개 이상의 매장, 지자체와<br>다양한 프리미엄 브랜드에서 선택한 키오스크</h2>
-            </div>
-            <div class="installation-image" style="text-align: center; margin-top: 40px;">
-                <img src="images/installation_cases.jpg" alt="Installation Cases"
-                    style="max-width: 100%; height: auto; border-radius: 10px;">
-            </div>
+        <section>
+            <div class="container">
+                <div class="section-title">
+                    <h2>1,500개 이상의 매장, 지자체와<br>다양한 프리미엄 브랜드에서 선택한 키오스크</h2>
+                </div>
+                <div class="installation-image" style="text-align: center; margin-top: 40px;">
+                    <img src="images/installation_cases.jpg" alt="Installation Cases"
+                        style="max-width: 100%; height: auto; border-radius: 10px;">
+                </div>
         </section>
 
 
