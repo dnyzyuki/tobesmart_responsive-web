@@ -777,6 +777,7 @@ header.scrolled .hamburger span {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: right;
     transition: transform 0.3s;
 }
 
@@ -785,13 +786,7 @@ header.scrolled .hamburger span {
 }
 
 .card-1 {
-    background: url('images/unmanned_system.png');
-    background-size: cover;
-    background-position: center;
-    justify-content: flex-start;
-    padding-top: 60px;
-    text-align: center;
-    /* Center text horizontally */
+    background-color: var(--card-1);
 }
 
 .card-2 {
