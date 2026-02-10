@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>투비스마트 소식 | TOBESMART</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo"><a href="index.html"><img src="images/logo_white.png" alt="TOBESMART"></a></div>
+            <ul class="nav-links">
+                <li class="has-dropdown">
+                    <a href="space_cube.html">서비스</a>
+                    <div class="mega-menu">
+                        <div class="container mega-menu-inner">
+                            <a href="space_cube.html" class="mega-item" style="text-decoration: none; display: block;">
+                                <i data-lucide="container"></i>
+                                <h4>스페이스큐브</h4>
+                                <p>공간 예약 및 출입 통제 솔루션</p>
+                            </a>
+                            <a href="sales_cube.html" class="mega-item" style="text-decoration: none; display: block;">
+                                <i data-lucide="coins"></i>
+                                <h4>세일즈큐브</h4>
+                                <p>다양한 상품의 스마트 판매 및 결제</p>
+                            </a>
+                            <a href="control_cube.html" class="mega-item"
+                                style="text-decoration: none; display: block;">
+                                <i data-lucide="sliders-horizontal"></i>
+                                <h4>컨트롤큐브</h4>
+                                <p>매장 시설 실시간 원격 제어</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="has-dropdown">
+                    <a href="about.html">회사소개</a>
+                    <div class="mega-menu">
+                        <div class="container mega-menu-inner">
+                            <a href="about.html" class="mega-item" style="text-decoration: none; display: block;">
+                                <i data-lucide="building-2"></i>
+                                <h4>회사개요</h4>
+                                <p>투비스마트의 발자취와 핵심 가치</p>
+                            </a>
+                            <a href="about.html#location" class="mega-item"
+                                style="text-decoration: none; display: block;">
+                                <i data-lucide="map-pin"></i>
+                                <h4>오시는 길</h4>
+                                <p>방문 상담 및 고객 지원 안내</p>
+                            </a>
+                            <a href="news.html" class="mega-item" style="text-decoration: none; display: block;">
+                                <i data-lucide="megaphone"></i>
+                                <h4>투비스마트 소식</h4>
+                                <p>새로운 소식과 공지사항을 확인하세요</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="contact.html">상담신청</a></li>
+            </ul>
+            <div class="header-right">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="sub-hero about-hero"
+            style="background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2000&auto=format&fit=crop');">
+            <div class="hero-overlay"></div>
+            <div class="container relative reveal" style="z-index: 2;">
+                <h1>투비스마트의 새로운 소식을<br>전해드립니다.</h1>
+            </div>
+        </section>
+
+        <!-- Board Section -->
+        <section class="board-container">
+            <div class="board-list reveal">
+                <a href="news_detail.html" class="board-item">
+                    <span class="board-no">3</span>
+                    <span class="board-title">세일즈큐브 최신 업데이트가 2026년 3월 패치예정입니다.</span>
+                    <span class="board-date">2026.02.10</span>
+                </a>
+                <a href="news_detail.html" class="board-item">
+                    <span class="board-no">2</span>
+                    <span class="board-title">투비스마트 공식 홈페이지가 리뉴얼 되었습니다.</span>
+                    <span class="board-date">2026.01.20</span>
+                </a>
+                <a href="news_detail.html" class="board-item">
+                    <span class="board-no">1</span>
+                    <span class="board-title">[공지] 설 연휴 고객센터 운영 안내 드립니다.</span>
+                    <span class="board-date">2026.01.15</span>
+                </a>
+            </div>
+
+            <!-- Pagination Placeholder -->
+            <div class="pagination reveal">
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo"><img src="images/logo_white.png" alt="TOBESMART"></div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-info">
+                    <p>대표: 김광 I 주소: 경기도 성남시 중원구 둔촌대로 484 시콕스타워 116/117호</p>
+                    <p>전화: 1577-3119 I 팩스: 031-701-4119 I 이메일: tobesmart@tobesmart.co.kr</p>
+                    <p>COPYRIGHT(C) TOBESMART. ALL RIGHTS RESERVED.</p>
+                </div>
+                <div class="footer-contact">
+                    <p><strong>고객센터</strong></p>
+                    <p>전화 1577-3119 I 이메일 tobesmart@tobesmart.co.kr</p>
+                    <p>평일 09:00 ~ 18:00</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Init Lucide Icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('mobile-active');
+        });
+
+        // Theme Toggle Logic
+        const themeToggle = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+
+        themeToggle.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            if (theme === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Scroll Reveal Animation
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
