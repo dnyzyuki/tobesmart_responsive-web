@@ -1699,8 +1699,8 @@ footer {
 }
 
 .stat-circle h3 {
-    font-size: 40px;
-    /* Increased from 32px to match visual importance */
+    font-size: 30px;
+    /* Adjusted from 40px to be more balanced on desktop */
     font-weight: 800;
     /* Extra bold */
     margin-bottom: 5px;
