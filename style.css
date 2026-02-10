@@ -1005,6 +1005,12 @@ footer {
     padding: var(--section-padding) 20px;
 }
 
+@media (max-width: 768px) {
+    .br-pc {
+        display: none;
+    }
+}
+
 .circle-item {
     flex: 1 1 45%;
 }
@@ -1200,17 +1206,20 @@ footer {
 
     /* Section Title Responsive */
     .section-title h2 {
-        font-size: 30px;
-        /* Reduced from 36px */
-        margin-bottom: 15px;
+        font-size: 24px;
+        /* Reduced from 30px */
+        margin-bottom: 12px;
+        word-break: keep-all;
     }
 
     .section-title p {
-        font-size: 17px;
+        font-size: 15px;
+        /* Reduced from 17px */
+        line-height: 1.6;
     }
 
     .section-title {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
 }
 
@@ -1724,20 +1733,22 @@ footer {
 
 @media (max-width: 768px) {
     .stats-grid {
-        gap: 20px;
+        gap: 15px;
     }
 
     .stat-circle {
-        width: 160px;
-        height: 160px;
+        width: 150px;
+        height: 150px;
     }
 
     .stat-circle h3 {
-        font-size: 24px;
+        font-size: 20px !important;
+        /* Force reduction to override inline styles */
+        margin-bottom: 3px;
     }
 
     .stat-circle p {
-        font-size: 14px;
+        font-size: 13px;
     }
 }
 
