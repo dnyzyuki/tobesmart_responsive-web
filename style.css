@@ -111,8 +111,8 @@ nav {
 }
 
 .logo img {
-    height: 25px;
-    /* Reduced to ~85% from 30px */
+    height: 28px;
+    /* Increased to 110% (from 25px) */
     /* Adjust based on actual image ratio */
     display: block;
 }
