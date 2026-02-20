@@ -477,6 +477,11 @@ header.scrolled .hamburger span {
     background-image: url('https://images.unsplash.com/photo-1605164599901-f8a1464a2c87?q=80&w=1470&auto=format&fit=crop');
 }
 
+.kiosk-hero {
+    /* Set your image URL here */
+    background-image: url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1470&auto=format&fit=crop');
+}
+
 .about-hero {
     background-image: url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2000&auto=format&fit=crop');
 }
