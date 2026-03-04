@@ -148,6 +148,24 @@
             </div>
         </section>
     </main>
+    <!-- Skyscraper Quick Menu -->
+    <div class="skyscraper">
+        <a href="tel:1577-3119" class="sky-item sky-phone">
+            <div class="sky-text">
+                <span class="label-txt">전화상담</span>
+                <span class="value">1577-3119</span>
+            </div>
+        </a>
+        <a href="contact.html" class="sky-item sky-consult">
+            <div class="sky-text">
+                <span class="label">상담신청</span>
+            </div>
+        </a>
+        <a href="#" class="sky-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+            <i class="fas fa-chevron-up"></i>
+            <span>TOP</span>
+        </a>
+    </div>
 
     <footer>
         <div class="container">
@@ -195,6 +213,26 @@
             } else {
                 document.documentElement.setAttribute('data-theme', 'dark');
                 localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        // Header & Skyscraper Scroll
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            const skyscraper = document.querySelector('.skyscraper');
+
+            // Header scroll effect
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            // Skyscraper visibility toggle
+            if (window.scrollY > 100) {
+                skyscraper.classList.add('visible');
+            } else {
+                skyscraper.classList.remove('visible');
             }
         });
 
