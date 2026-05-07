@@ -39,31 +39,29 @@
                     </div>
                 </li>
                 <li class="has-dropdown">
-                    <a href="kiosk.html">판매제품</a>
-                    <div class="mega-menu" style="display: none;">
+                    <a href="product_space.html">판매제품</a>
+                    <div class="mega-menu">
                         <div class="container mega-menu-inner">
-                            <div class="mega-item">
-                                <a href="kiosk.html" style="text-decoration: none; display: block; color: inherit;">
-                                    <i data-lucide="tablet"></i>
-                                    <h4>키오스크</h4>
-                                    <p>다양한 환경에 최적화된 라인업</p>
-                                </a>
-                            </div>
-                            <div class="mega-item">
-                                <i data-lucide="accessibility"></i>
-                                <h4>배리어프리키오스크</h4>
-                                <p>누구나 편리하게 사용하는 접근성</p>
-                            </div>
-                            <div class="mega-item">
-                                <i data-lucide="sheet"></i>
-                                <h4>스마트자판기</h4>
-                                <p>24시간 자동 판매 시스템</p>
-                            </div>
-                            <div class="mega-item">
-                                <i data-lucide="dock"></i>
-                                <h4>테이블오더/POS</h4>
-                                <p>스마트한 주문 및 결제 관리</p>
-                            </div>
+                            <a href="product_space.html" class="mega-item" style="text-decoration: none; display: block;">
+                                <i data-lucide="layout-dashboard"></i>
+                                <h4>공간운영</h4>
+                                <p>다양한 공간의 효율적인 운영 관리</p>
+                            </a>
+                            <a href="product_access.html" class="mega-item" style="text-decoration: none; display: block;">
+                                <i data-lucide="door-open"></i>
+                                <h4>출입관제</h4>
+                                <p>안전하고 스마트한 출입 통제 시스템</p>
+                            </a>
+                            <a href="product_sales.html" class="mega-item" style="text-decoration: none; display: block;">
+                                <i data-lucide="shopping-cart"></i>
+                                <h4>무인판매</h4>
+                                <p>24시간 스마트 무인 판매 솔루션</p>
+                            </a>
+                            <a href="product_etc.html" class="mega-item" style="text-decoration: none; display: block;">
+                                <i data-lucide="layers"></i>
+                                <h4>기타</h4>
+                                <p>기타 판매 제품 및 솔루션</p>
+                            </a>
                         </div>
                     </div>
                 </li>
@@ -146,35 +144,22 @@
                         </div>
 
                         <div class="form-group">
-                            <label>상담유형 선택 (중복선택 가능)<span>*</span></label>
-                            <div class="checkbox-group">
-                                <label class="checkbox-item">
-                                    <input type="checkbox" name="type" value="kiosk">
-                                    <div class="custom-checkbox"></div>
-                                    <span>키오스크</span>
-                                </label>
-                                <label class="checkbox-item">
-                                    <input type="checkbox" name="type" value="barrier-free">
-                                    <div class="custom-checkbox"></div>
-                                    <span>배리어프리 키오스크</span>
-                                </label>
-                                <label class="checkbox-item">
-                                    <input type="checkbox" name="type" value="pos-order">
-                                    <div class="custom-checkbox"></div>
-                                    <span>테이블오더/포스</span>
-                                </label>
-                                <label class="checkbox-item">
-                                    <input type="checkbox" name="type" value="partnership">
-                                    <div class="custom-checkbox"></div>
-                                    <span>제휴</span>
-                                </label>
-                                <label class="checkbox-item">
-                                    <input type="checkbox" name="type" value="etc">
-                                    <div class="custom-checkbox"></div>
-                                    <span>기타</span>
-                                </label>
-                            </div>
-                            <div class="error-text" id="typeError">상담유형을 최소 하나 이상 선택해 주세요.</div>
+                            <label for="product_type">상담희망제품<span>*</span></label>
+                            <select id="product_type" name="product_type" class="form-control" required
+                                style="cursor: pointer; appearance: auto;">
+                                <option value="" disabled selected>상담희망제품을 선택해 주세요</option>
+                                <option value="배리어프리 & 일반 키오스크">배리어프리 & 일반 키오스크</option>
+                                <option value="의류 및 각종 셀프결제 키오스크">의류 및 각종 셀프결제 키오스크</option>
+                                <option value="기부모금 키오스크">기부모금 키오스크</option>
+                                <option value="교육용 체험 키오스크">교육용 체험 키오스크</option>
+                                <option value="무인세차 및 반려동물 무인시설">무인세차 및 반려동물 무인시설</option>
+                                <option value="테이블오더/포스">테이블오더/포스</option>
+                                <option value="출입통제기">출입통제기</option>
+                                <option value="스마트밴딩머신 (냉장 ㆍ냉동 ㆍ상온 스마트 밴딩머신)">스마트밴딩머신 (냉장 ㆍ냉동 ㆍ상온 스마트 밴딩머신)</option>
+                                <option value="각종 무인 솔루션 및 하드웨어 개발 의뢰">각종 무인 솔루션 및 하드웨어 개발 의뢰</option>
+                                <option value="기타">기타</option>
+                            </select>
+                            <div class="error-text" id="typeError">상담희망제품을 선택해 주세요.</div>
                         </div>
 
                         <div class="form-group">
@@ -377,7 +362,7 @@
             const name = document.getElementById('name');
             const phone = document.getElementById('phone');
             const email = document.getElementById('email');
-            const typeCheckboxes = document.querySelectorAll('input[name="type"]:checked');
+            const productType = document.getElementById('product_type');
             const modalPrivacy = document.getElementById('modalPrivacy');
 
             let firstError = null;
@@ -401,9 +386,9 @@
             }
 
             // Validate Type
-            if (typeCheckboxes.length === 0) {
+            if (!productType.value) {
                 document.getElementById('typeError').closest('.form-group').classList.add('has-error');
-                if (!firstError) firstError = "상담유형을 최소 하나 이상 선택해 주세요.";
+                if (!firstError) firstError = "상담희망제품을 선택해 주세요.";
             }
 
             // Validate Agreement

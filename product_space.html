@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>투비스마트 - 키오스크</title>
+    <link rel="stylesheet" as="style" crossorigin
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo"><a href="index.html"><img src="images/logo_white.png" alt="TOBESMART"></a></div>
+            <ul class="nav-links">
+                <li class="has-dropdown">
+                    <a href="space_cube.html">서비스</a>
+                    <div class="mega-menu">
+                        <div class="container mega-menu-inner">
+                            <a href="space_cube.html" class="mega-item" style="text-decoration: none; display: block;">
+                                <i data-lucide="container"></i>
+                                <h4>스페이스큐브</h4>
+                                <p>공간 예약 및 출입 통제 솔루션</p>
+                            </a>
+                            <a href="sales_cube.html" class="mega-item" style="text-decoration: none; display: block;">
+                                <i data-lucide="coins"></i>
+                                <h4>세일즈큐브</h4>
+                                <p>다양한 상품의 스마트 판매 및 결제</p>
+                            </a>
+                            <a href="control_cube.html" class="mega-item"
+                                style="text-decoration: none; display: block;">
+                                <i data-lucide="sliders-horizontal"></i>
+                                <h4>컨트롤큐브</h4>
+                                <p>매장 시설 실시간 원격 제어</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="has-dropdown">
+                    <a href="product_space.html">판매제품</a>
+                    <div class="mega-menu">
+                        <div class="container mega-menu-inner">
+                            <a href="product_space.html" class="mega-item"
+                                style="text-decoration: none; display: block;">
+                                <i data-lucide="layout-dashboard"></i>
+                                <h4>공간운영</h4>
+                                <p>다양한 공간의 효율적인 운영 관리</p>
+                            </a>
+                            <a href="product_access.html" class="mega-item"
+                                style="text-decoration: none; display: block;">
+                                <i data-lucide="door-open"></i>
+                                <h4>출입관제</h4>
+                                <p>안전하고 스마트한 출입 통제 시스템</p>
+                            </a>
+                            <a href="product_sales.html" class="mega-item"
+                                style="text-decoration: none; display: block;">
+                                <i data-lucide="shopping-cart"></i>
+                                <h4>무인판매</h4>
+                                <p>24시간 스마트 무인 판매 솔루션</p>
+                            </a>
+                            <a href="product_etc.html" class="mega-item" style="text-decoration: none; display: block;">
+                                <i data-lucide="layers"></i>
+                                <h4>기타</h4>
+                                <p>기타 판매 제품 및 솔루션</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="has-dropdown">
+                    <a href="about.html">회사소개</a>
+                    <div class="mega-menu">
+                        <div class="container mega-menu-inner">
+                            <a href="about.html" class="mega-item" style="text-decoration: none; display: block;">
+                                <i data-lucide="building-2"></i>
+                                <h4>회사개요</h4>
+                                <p>투비스마트의 발자취와 핵심 가치</p>
+                            </a>
+                            <a href="about.html#location" class="mega-item"
+                                style="text-decoration: none; display: block;">
+                                <i data-lucide="map-pin"></i>
+                                <h4>오시는 길</h4>
+                                <p>방문 상담 및 고객 지원 안내</p>
+                            </a>
+                            <a href="news.html" class="mega-item" style="text-decoration: none; display: block;">
+                                <i data-lucide="megaphone"></i>
+                                <h4>투비스마트 소식</h4>
+                                <p>새로운 소식과 공지사항을 확인하세요</p>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="contact.html">상담신청</a></li>
+            </ul>
+            <div class="header-right">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i data-lucide="sun" class="sun-icon"></i>
+                    <i data-lucide="moon" class="moon-icon"></i>
+                </button>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Service Hero -->
+        <section class="sub-hero kiosk-hero">
+            <div class="hero-overlay"></div>
+            <div class="container relative reveal" style="z-index: 2;">
+                <h1>공간운영<br class="br-pc"> 스마트 솔루션</h1>
+            </div>
+        </section>
+
+        <!-- Sub Tabs -->
+        <div class="page-tabs-wrapper">
+            <div class="container">
+                <ul class="page-tabs" id="pageTabs">
+                    <li class="active"><a href="#studycafe">스터디카페</a></li>
+                    <li><a href="#office">공유오피스</a></li>
+                    <li><a href="#kidscafe">키즈카페</a></li>
+                    <li><a href="#storage">공유창고</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Tab Contents -->
+        <div id="tabContent-studycafe" class="tab-content-block" style="display: block; padding: 60px 0;">
+            <!-- Intro / Overview -->
+            <section>
+                <div class="container text-center">
+                    <div class="section-title" style="margin-bottom: 60px;">
+                        <h2 style="word-break: keep-all;">
+                            스터디카페와 관리형독서실에 최적화된<br>투비스마트 스터디큐브 솔루션
+                        </h2>
+                        <p
+                            style="font-size: 1.1rem; color: var(--text-muted); margin-top: 20px; line-height: 1.6; word-break: keep-all;">
+                            스터디카페와 관리형독서실의 무인 운영을 극대화할 수 있도록<br class="br-pc">
+                            안정적이고 직관적인 결제 및 예약 시스템이 결합된 키오스크로,<br class="br-pc">
+                            좌석 선택/ 시간 연장/ 입퇴실 관리/ 빈틈없는 매출 관리 기능을 제공합니다.
+                        </p>
+                    </div>
+                    <!-- Glassmorphism Feature Icons -->
+                    <div class="container">
+                        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                            <!-- High Contrast -->
+                            <div class="glass-card"
+                                style="flex: 1; min-width: 220px; max-width: 280px; border-radius: 30px; padding: 40px 20px; text-align: center; box-shadow: 0 20px 40px var(--card-shadow); margin-bottom: 20px;">
+                                <div
+                                    style="width: 80px; height: 80px; background: linear-gradient(135deg, #e0e0ff 0%, #6CCFFF 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 10px 20px rgba(100, 100, 255, 0.1);">
+                                    <i data-lucide="contrast" style="width: 40px; height: 40px; color: #135a86;"></i>
+                                </div>
+                                <h4
+                                    style="font-size: 1.45rem; font-weight: 700; color: var(--text-main); margin-bottom: 0;">
+                                    누구나 쉽게</h4>
+                            </div>
+                            <!-- Voice Guidance -->
+                            <div class="glass-card"
+                                style="flex: 1; min-width: 220px; max-width: 280px; border-radius: 30px; padding: 40px 20px; text-align: center; box-shadow: 0 20px 40px var(--card-shadow); margin-bottom: 20px;">
+                                <div
+                                    style="width: 80px; height: 80px; background: linear-gradient(135deg, #e0e0ff 0%, #6C9AFF 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 10px 20px rgba(100, 100, 255, 0.1);">
+                                    <i data-lucide="megaphone" style="width: 40px; height: 40px; color: #244493;"></i>
+                                </div>
+                                <h4
+                                    style="font-size: 1.45rem; font-weight: 700; color: var(--text-main); margin-bottom: 0;">
+                                    어떤 결제든 가능</h4>
+                            </div>
+                            <!-- Keypad -->
+                            <div class="glass-card"
+                                style="flex: 1; min-width: 220px; max-width: 280px; border-radius: 30px; padding: 40px 20px; text-align: center; box-shadow: 0 20px 40px var(--card-shadow); margin-bottom: 20px;">
+                                <div
+                                    style="width: 80px; height: 80px; background: linear-gradient(135deg, #e0e0ff 0%, #6CCFFF 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 10px 20px rgba(100, 100, 255, 0.1);">
+                                    <i data-lucide="grid-3x3" style="width: 40px; height: 40px; color: #135a86;"></i>
+                                </div>
+                                <h4
+                                    style="font-size: 1.45rem; font-weight: 700; color: var(--text-main); margin-bottom: 0;">
+                                    꼼꼼한 입퇴실 관리
+                                </h4>
+                            </div>
+                            <!-- Low Stature
+                            <div class="glass-card"
+                                style="flex: 1; min-width: 220px; max-width: 280px; border-radius: 30px; padding: 40px 20px; text-align: center; box-shadow: 0 20px 40px var(--card-shadow); margin-bottom: 20px;">
+                                <div
+                                    style="width: 80px; height: 80px; background: linear-gradient(135deg, #e0e0ff 0%, #9AF4B2 100%); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; box-shadow: 0 10px 20px rgba(100, 100, 255, 0.1);">
+                                    <i data-lucide="accessibility"
+                                        style="width: 40px; height: 40px; color: #326545;"></i>
+                                </div>
+                                <h4
+                                    style="font-size: 1.45rem; font-weight: 700; color: var(--text-main); margin-bottom: 0;">
+                                    저자세
+                                    모드</h4>
+                            </div> -->
+                        </div>
+                    </div>
+
+                    <div class="bfkiosk-image"
+                        style="margin-top: 50px; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+                        <div style="flex: 1; text-align: center;">
+                            <h3
+                                style="font-size: 1.1rem; font-weight: 600; margin-bottom: 20px; color: var(--text-main);">
+                                기본 키오스크</h3>
+                            <img src="images/bf_space.png" alt="Barrier Free Kiosk Space"
+                                style="width: auto; max-width: 100%; height: 680px; object-fit: contain; display: block; margin: 0 auto; image-rendering: high-quality;">
+                        </div>
+                        <div style="flex: 1; text-align: center;">
+                            <h3
+                                style="font-size: 1.1rem; font-weight: 600; margin-bottom: 20px; color: var(--text-main);">
+                                스탠드 키오스크</h3>
+                            <img src="images/bf_stand.png" alt="Barrier Free Kiosk Stand"
+                                style="width: auto; max-width: 100%; height: 680px; object-fit: contain; display: block; margin: 0 auto; image-rendering: high-quality;">
+                        </div>
+                    </div>
+
+                    <!-- Specs and Features -->
+                    <div class="kiosk-specs"
+                        style="margin-top: 80px; display: flex; justify-content: center; gap: 60px; flex-wrap: wrap; text-align: left; max-width: 960px; margin-left: auto; margin-right: auto;">
+
+                        <!-- Common Features -->
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3
+                                style="font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; border-bottom: 2px solid var(--text-main); padding-bottom: 10px;">
+                                공통기능</h3>
+                            <ul
+                                style="list-style: disc; padding-left: 20px; line-height: 1.8; color: var(--text-main); font-size: 0.95rem;">
+                                <li>카드 전용 결제 (IC카드, 삼성페이, 제로페이, 간편결제, 지역화폐)</li>
+                                <li>좌석구매, 예약 및 연장 (자유석, 고정석, 스터디룸, 사물함)</li>
+                                <li>휴대폰 번호, QR 입퇴실 가능</li>
+                                <li>실시간 좌석 및 이용권 현황</li>
+                                <li>자유로운 좌석 이동</li>
+                                <li>운영 시간 및 휴무일 안내</li>
+                                <li>블랙 고객 이용 및 출입 제한</li>
+                                <li>알림톡 자동 전송</li>
+                                <li>과세/면세 결제로 스터디카페, 독서실 모두 지원</li>
+                            </ul>
+                        </div>
+
+                        <!-- Specifications -->
+                        <div style="flex: 1; min-width: 300px;">
+                            <h3
+                                style="font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; border-bottom: 2px solid var(--text-main); padding-bottom: 10px;">
+                                사양</h3>
+                            <ul
+                                style="list-style: disc; padding-left: 20px; line-height: 1.8; color: var(--text-main); font-size: 0.95rem;">
+                                <li>배리어프리 키오스크 21.5' / 24' / 32'</li>
+                                <li>모델명 : BSK-24F-Stand</li>
+                                <li>CPU : Intel i5 Processor</li>
+                                <li>Memory : 256G / 128GB</li>
+                                <li>RAM : 8GB</li>
+                                <li>Monitor : 32인치 / 24인치</li>
+                                <li>Size (32') : 524(W) x 1902.5(H) x 543(D)</li>
+                                <li>Size (24') : 450(W) x 1626.3(H) x 450(D)</li>
+                                <li>Weight : 20kg / 17kg</li>
+                                <li>거치대 : 데스크형 거치대 / 스탠드형 키오스크 거치대</li>
+                                <li>배리어프리 : 멀티패널 마이크, 촉각 키패드, 점자 스티커, QR리더기</li>
+                            </ul>
+                        </div>
+                    </div>
+            </section>
+
+            <!-- 스터디큐브 종합 시스템 상세 안내 (CSS 레이아웃) -->
+            <section class="integrated-systems" style="margin-top: 100px; margin-bottom: 100px;">
+                <div class="container">
+
+                    <!-- 1. 출입통제 시스템 -->
+                    <div class="feature-item reveal"
+                        style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 30px; margin-bottom: 100px;">
+                        <div style="width: 100%; max-width: 800px;">
+                            <div
+                                style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 15px; margin-bottom: 25px;">
+                                <div
+                                    style="width: 55px; height: 55px; background-color: rgba(0, 0, 0, 0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <i data-lucide="shield-check"
+                                        style="width: 28px; height: 28px; color: var(--text-main);"></i>
+                                </div>
+                                <h3
+                                    style="font-size: 1.85rem; font-weight: 700; color: var(--text-main); margin: 0; word-break: keep-all;">
+                                    출입통제 시스템</h3>
+                            </div>
+                            <p
+                                style="font-size: 1.15rem; line-height: 1.7; color: var(--text-main); word-break: keep-all;">
+                                QR, 지문, 얼굴 인증 이외에 발열체크 등을 단말기로 연동하여<br> 방역정보 및 마스크 착용 여부를 꼼꼼히 체크합니다.
+                            </p>
+                        </div>
+                        <div style="width: 100%; text-align: center;">
+                            <img src="images/acs.png" alt="출입통제 단말기"
+                                style="max-height: 350px; width: auto; object-fit: contain;">
+                        </div>
+                    </div>
+
+                    <!-- 2. 무인 사물함 -->
+                    <div class="feature-item reveal"
+                        style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 30px; margin-bottom: 100px;">
+                        <div style="width: 100%; max-width: 800px;">
+                            <div
+                                style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 15px; margin-bottom: 25px;">
+                                <div
+                                    style="width: 55px; height: 55px; background-color: rgba(0, 0, 0, 0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <i data-lucide="box"
+                                        style="width: 28px; height: 28px; color: var(--text-main);"></i>
+                                </div>
+                                <h3
+                                    style="font-size: 1.85rem; font-weight: 700; color: var(--text-main); margin: 0; word-break: keep-all;">
+                                    무인 사물함</h3>
+                            </div>
+                            <p
+                                style="font-size: 1.15rem; line-height: 1.7; color: var(--text-main); word-break: keep-all; margin-bottom: 15px;">
+                                키오스크, 모바일웹과 연계되어 사물함을 판매하며 고객에게 발급된<br> QR을 통해 간편하게 결제/개폐하여 편의를 제공합니다.<br>
+                                사용자가 매우 편리하게 사물함을 관리/사용할 수 있는 최신 사물함입니다.
+                            </p>
+                            <p style="font-size: 0.95rem; color: var(--text-muted);">
+                                * 사물함 개별 크기: 350(H) x 350(W) x 400(D) mm
+                            </p>
+                        </div>
+                        <div style="width: 100%; text-align: center;">
+                            <img src="images/scbox.png" alt="스마트 사물함"
+                                style="max-height: 350px; width: auto; object-fit: contain;">
+                        </div>
+                    </div>
+
+                    <!-- 3. 외출/퇴실기 -->
+                    <div class="feature-item reveal"
+                        style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 30px; margin-bottom: 100px;">
+                        <div style="width: 100%; max-width: 800px;">
+                            <div
+                                style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 15px; margin-bottom: 25px;">
+                                <div
+                                    style="width: 55px; height: 55px; background-color: rgba(0, 0, 0, 0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <i data-lucide="log-out"
+                                        style="width: 28px; height: 28px; color: var(--text-main);"></i>
+                                </div>
+                                <h3
+                                    style="font-size: 1.85rem; font-weight: 700; color: var(--text-main); margin: 0; word-break: keep-all;">
+                                    외출/퇴실기</h3>
+                            </div>
+                            <p
+                                style="font-size: 1.15rem; line-height: 1.7; color: var(--text-main); word-break: keep-all;">
+                                내부에서 외부로 나갈 때 사용하는 전용 외출/퇴실기입니다.<br>
+                                퇴실 시 등록된 보호자에게 알림톡이 전송되며, IOT 시스템과 바로 연동되어<br>매장 자동 제어 및 운영의 완벽한 편리성과 수익극대화 환경을 제공합니다.
+                            </p>
+                        </div>
+                        <div style="width: 100%; text-align: center;">
+                            <img src="images/inout.png" alt="외출 퇴실 기록기"
+                                style="max-height: 350px; width: auto; object-fit: contain;">
+                        </div>
+                    </div>
+
+                    <!-- 4. 스터디큐브 IOT -->
+                    <div class="feature-item reveal"
+                        style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 30px; margin-bottom: 100px;">
+                        <div style="width: 100%; max-width: 800px;">
+                            <div
+                                style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 15px; margin-bottom: 25px;">
+                                <div
+                                    style="width: 55px; height: 55px; background-color: rgba(0, 0, 0, 0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <i data-lucide="zap"
+                                        style="width: 28px; height: 28px; color: var(--text-main);"></i>
+                                </div>
+                                <h3
+                                    style="font-size: 1.85rem; font-weight: 700; color: var(--text-main); margin: 0; word-break: keep-all;">
+                                    스터디큐브 IOT (조명 및 전원제어)</h3>
+                            </div>
+                            <p
+                                style="font-size: 1.15rem; line-height: 1.7; color: var(--text-main); word-break: keep-all;">
+                                좌석별로 각인된 사용 상태에 연동되어 조명 및 전원 소켓을 매장이 알아서<br>자동 제어해주는 스마트 IOT 제어 기능을 제공합니다.
+                            </p>
+                        </div>
+                        <div style="width: 100%; text-align: center;">
+                            <img src="images/iot.png" alt="IOT 스마트 조명제어"
+                                style="max-height: 350px; width: auto; object-fit: contain;">
+                        </div>
+                    </div>
+
+                    <!-- 5. 스터디큐브 출입제어 -->
+                    <div class="feature-item reveal"
+                        style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 30px; margin-bottom: 100px;">
+                        <div style="width: 100%; max-width: 800px;">
+                            <div
+                                style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 15px; margin-bottom: 25px;">
+                                <div
+                                    style="width: 55px; height: 55px; background-color: rgba(0, 0, 0, 0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <i data-lucide="key"
+                                        style="width: 28px; height: 28px; color: var(--text-main);"></i>
+                                </div>
+                                <h3
+                                    style="font-size: 1.85rem; font-weight: 700; color: var(--text-main); margin: 0; word-break: keep-all;">
+                                    스터디큐브 출입제어</h3>
+                            </div>
+                            <p
+                                style="font-size: 1.15rem; line-height: 1.7; color: var(--text-main); word-break: keep-all;">
+                                매장에 비치된 인터넷 전용선이 끊어져도 O.K.<br>
+                                키오스크 기기의 전원이 예기치 않게 종료되어도 정상 작동하는 <br> 최신 독립적 개폐 통제 시스템을 지원합니다.
+                            </p>
+                        </div>
+                        <div style="width: 100%; max-width: 600px; margin: 0 auto;">
+                            <div
+                                style="display: flex; align-items: center; justify-content: space-around; gap: 10px; background: rgba(0,0,0,0.02); padding: 40px 20px; border-radius: 20px; border: 1px solid rgba(0,0,0,0.05);">
+                                <div style="text-align: center; flex: 1;">
+                                    <i data-lucide="smartphone"
+                                        style="width: 45px; height: 45px; color: var(--text-main); margin-bottom: 15px;"></i>
+                                    <p style="font-weight: 600; font-size: 0.95rem; color: var(--text-main);">스마트키</p>
+                                </div>
+                                <i data-lucide="chevron-right"
+                                    style="width: 30px; height: 30px; color: var(--text-muted); flex-shrink: 0;"></i>
+                                <div style="text-align: center; flex: 1;">
+                                    <i data-lucide="qr-code"
+                                        style="width: 45px; height: 45px; color: var(--text-main); margin-bottom: 15px;"></i>
+                                    <p style="font-weight: 600; font-size: 0.95rem; color: var(--text-main);">QR스캐너 접촉
+                                    </p>
+                                </div>
+                                <i data-lucide="chevron-right"
+                                    style="width: 30px; height: 30px; color: var(--text-muted); flex-shrink: 0;"></i>
+                                <div style="text-align: center; flex: 1;">
+                                    <i data-lucide="unlock"
+                                        style="width: 45px; height: 45px; color: var(--text-main); margin-bottom: 15px;"></i>
+                                    <p style="font-weight: 600; font-size: 0.95rem; color: var(--text-main);">출입문 잠금해제
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 6. 무인매장관리 프로그램 -->
+                    <div class="feature-item reveal"
+                        style="display: flex; flex-direction: column; align-items: center; text-align: center; gap: 30px; margin-bottom: 50px;">
+                        <div style="width: 100%; max-width: 800px;">
+                            <div
+                                style="display: flex; flex-direction: column; align-items: center; gap: 15px; margin-bottom: 25px;">
+                                <div
+                                    style="width: 55px; height: 55px; background-color: rgba(0, 0, 0, 0.05); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <i data-lucide="monitor"
+                                        style="width: 28px; height: 28px; color: var(--text-main);"></i>
+                                </div>
+                                <h3
+                                    style="font-size: 1.85rem; font-weight: 700; color: var(--text-main); margin: 0; word-break: keep-all;">
+                                    무인매장관리 프로그램</h3>
+                            </div>
+                            <p
+                                style="font-size: 1.15rem; line-height: 1.7; color: var(--text-main); word-break: keep-all;">
+                                매출관리 / 좌석관리 / 상품관리 / 회원관리 / 출입 및 문 관리 기능을 하나의 관리자 모드에서 컨트롤 하세요.<br>
+                                매출 분석 및 매장 현황을 실시간으로 직관적으로 파악할 수 있는 통합 솔루션입니다.
+                            </p>
+                        </div>
+                        <div style="width: 100%; text-align: center;">
+                            <img src="images/admin01.png" alt="통합 무인 매장 관리 프로그램 UI"
+                                style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 15px 40px rgba(0,0,0,0.1);">
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Service Process Section -->
+            <section style="margin-top: 80px; margin-bottom: 80px;" class="reveal">
+                <div class="container text-center">
+                    <div class="section-title" style="margin-bottom: 50px;">
+                        <h2 style="word-break: keep-all;">비용·시간 down 효율성 up<br class="br-pc">스터디큐브는 이렇게 서비스 됩니다.</h2>
+                    </div>
+                    <img src="images/service_process.png" alt="Service Process Flow"
+                        style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+                </div>
+            </section>
+
+            <!-- Hardware Devices Section -->
+            <section style="margin-top: 60px; margin-bottom: 60px;" class="reveal">
+                <div class="container hardware-grid"
+                    style="display: flex; gap: 40px; justify-content: center; flex-wrap: wrap;">
+
+                    <!-- Column 1: 입실기 -->
+                    <div style="flex: 1; min-width: 300px;">
+                        <div
+                            style="text-align: left; margin-bottom: 30px; display: flex; align-items: center; gap: 10px;">
+                            <i data-lucide="log-in" style="width: 40px; height: 40px; color: #0088cc;"></i>
+                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #0088cc; margin: 0;">입실기</h3>
+                        </div>
+
+                        <!-- Product 1 -->
+                        <div style="display: flex; gap: 15px; margin-bottom: 40px;">
+                            <div style="flex: 0 0 80px; text-align: center;">
+                                <img src="images/kpad.png" alt="QR 전용"
+                                    style="width: 100%; height: auto; object-fit: contain; max-height: 120px;">
+                            </div>
+                            <div style="flex: 1;">
+                                <h4 style="font-size: 1.1rem; font-weight: 700; color: #0088cc; margin-bottom: 10px;">QR
+                                    전용</h4>
+                                <h5
+                                    style="font-size: 0.9rem; font-weight: 600; margin-bottom: 5px; color: var(--text-main);">
+                                    기본 스펙</h5>
+                                <ul
+                                    style="list-style: none; padding: 0; margin: 0 0 15px 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">
+                                    <li style="position: relative; padding-left: 10px; margin-bottom: 3px;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: #0088cc; border-radius: 50%;"></span>
+                                        색상 : 블랙
+                                    </li>
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: #0088cc; border-radius: 50%;"></span>
+                                        크기 : (높이)70mm / (넓이)280mm / <br>(깊이)40mm
+                                    </li>
+                                </ul>
+                                <h5
+                                    style="font-size: 0.9rem; font-weight: 600; margin-bottom: 5px; color: var(--text-main);">
+                                    특장점</h5>
+                                <ul
+                                    style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: #0088cc; border-radius: 50%;"></span>
+                                        스마트하게 출입 관리 가능한 가성비 좋은 제품
+                                    </li>
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: #0088cc; border-radius: 50%;"></span>
+                                        유효한 스마트키(QR)로만 출입 가능
+                                    </li>
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: #0088cc; border-radius: 50%;"></span>
+                                        미운영 시간 출입 통제 가능
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div style="display: flex; gap: 15px; margin-bottom: 40px;">
+                            <div style="flex: 0 0 80px; text-align: center;">
+                                <img src="images/Frame 2.png" alt="QR+지문 겸용"
+                                    style="width: 100%; height: auto; object-fit: contain; max-height: 120px;">
+                            </div>
+                            <div style="flex: 1;">
+                                <h4 style="font-size: 1.1rem; font-weight: 700; color: #0088cc; margin-bottom: 10px;">
+                                    QR+지문 겸용</h4>
+                                <h5
+                                    style="font-size: 0.9rem; font-weight: 600; margin-bottom: 5px; color: var(--text-main);">
+                                    기본 스펙</h5>
+                                <ul
+                                    style="list-style: none; padding: 0; margin: 0 0 15px 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">
+                                    <li style="position: relative; padding-left: 10px; margin-bottom: 3px;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: #0088cc; border-radius: 50%;"></span>
+                                        색상 : 블랙
+                                    </li>
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: #0088cc; border-radius: 50%;"></span>
+                                        크기 : (높이)70mm / (넓이)280mm / <br>(깊이)40mm
+                                    </li>
+                                </ul>
+                                <h5
+                                    style="font-size: 0.9rem; font-weight: 600; margin-bottom: 5px; color: var(--text-main);">
+                                    특장점</h5>
+                                <ul
+                                    style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: #0088cc; border-radius: 50%;"></span>
+                                        스마트하게 출입 관리 가능한 제품
+                                    </li>
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: #0088cc; border-radius: 50%;"></span>
+                                        유효한 스마트키(QR) 및 지문으로만 출입 가능
+                                    </li>
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: #0088cc; border-radius: 50%;"></span>
+                                        미운영 시간 출입 통제 가능
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 2: 외출퇴실기 -->
+                    <div style="flex: 1; min-width: 300px;">
+                        <div
+                            style="text-align: left; margin-bottom: 30px; display: flex; align-items: center; gap: 10px;">
+                            <i data-lucide="log-out" style="width: 40px; height: 40px; color: #28a745;"></i>
+                            <h3 style="font-size: 1.5rem; font-weight: 700; color: #28a745; margin: 0;">외출퇴실기</h3>
+                        </div>
+
+                        <!-- Product 1 -->
+                        <div style="display: flex; gap: 15px; margin-bottom: 40px;">
+                            <div style="flex: 0 0 80px; text-align: center;">
+                                <img src="images/kpad.png" alt="QR 전용"
+                                    style="width: 100%; height: auto; object-fit: contain; max-height: 120px;">
+                            </div>
+                            <div style="flex: 1;">
+                                <h4 style="font-size: 1.1rem; font-weight: 700; color: #28a745; margin-bottom: 10px;">QR
+                                    전용</h4>
+                                <h5
+                                    style="font-size: 0.9rem; font-weight: 600; margin-bottom: 5px; color: var(--text-main);">
+                                    기본 스펙</h5>
+                                <ul
+                                    style="list-style: none; padding: 0; margin: 0 0 15px 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">
+                                    <li style="position: relative; padding-left: 10px; margin-bottom: 3px;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: #28a745; border-radius: 50%;"></span>
+                                        색상 : 블랙
+                                    </li>
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: #28a745; border-radius: 50%;"></span>
+                                        크기 : (높이)282mm / (넓이)202mm / <br>(깊이)70mm
+                                    </li>
+                                </ul>
+                                <h5
+                                    style="font-size: 0.9rem; font-weight: 600; margin-bottom: 5px; color: var(--text-main);">
+                                    특장점</h5>
+                                <ul
+                                    style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: #28a745; border-radius: 50%;"></span>
+                                        스마트하게 출입 관리 가능한 제품
+                                    </li>
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: #28a745; border-radius: 50%;"></span>
+                                        유효한 스마트키(QR) 및 지문으로만 출입 가능
+                                    </li>
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: #28a745; border-radius: 50%;"></span>
+                                        미운영 시간 출입 통제 가능
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div style="display: flex; gap: 15px; margin-bottom: 40px;">
+                            <div style="flex: 0 0 80px; text-align: center;">
+                                <img src="images/Frame 2.png" alt="QR+지문 겸용"
+                                    style="width: 100%; height: auto; object-fit: contain; max-height: 120px;">
+                            </div>
+                            <div style="flex: 1;">
+                                <h4 style="font-size: 1.1rem; font-weight: 700; color: #28a745; margin-bottom: 10px;">
+                                    QR+지문 겸용</h4>
+                                <h5
+                                    style="font-size: 0.9rem; font-weight: 600; margin-bottom: 5px; color: var(--text-main);">
+                                    기본 스펙</h5>
+                                <ul
+                                    style="list-style: none; padding: 0; margin: 0 0 15px 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">
+                                    <li style="position: relative; padding-left: 10px; margin-bottom: 3px;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: #28a745; border-radius: 50%;"></span>
+                                        색상 : 블랙
+                                    </li>
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: #28a745; border-radius: 50%;"></span>
+                                        크기 : (높이)70mm / (넓이)280mm / <br>(깊이)40mm
+                                    </li>
+                                </ul>
+                                <h5
+                                    style="font-size: 0.9rem; font-weight: 600; margin-bottom: 5px; color: var(--text-main);">
+                                    특장점</h5>
+                                <ul
+                                    style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: #28a745; border-radius: 50%;"></span>
+                                        스마트하게 출입 관리 가능한 제품
+                                    </li>
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: #28a745; border-radius: 50%;"></span>
+                                        유효한 스마트키(QR) 및 지문으로만 출입 가능
+                                    </li>
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: #28a745; border-radius: 50%;"></span>
+                                        미운영 시간 출입 통제 가능
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Column 3: 원격 제어 기기 -->
+                    <div style="flex: 1; min-width: 300px;">
+                        <div
+                            style="text-align: left; margin-bottom: 30px; display: flex; align-items: center; gap: 10px;">
+                            <i data-lucide="cloud-cog" style="width: 40px; height: 40px; color: var(--text-main);"></i>
+                            <h3 style="font-size: 1.5rem; font-weight: 700; color: var(--text-main); margin: 0;">원격 제어
+                                기기</h3>
+                        </div>
+
+                        <!-- Product 1 -->
+                        <div style="display: flex; gap: 15px; margin-bottom: 40px;">
+                            <div style="flex: 0 0 100px; text-align: center;">
+                                <img src="images/Frame 3.png" alt="스마트 사물함"
+                                    style="width: 100%; height: auto; object-fit: contain; max-height: 120px;">
+                            </div>
+                            <div style="flex: 1;">
+                                <h4
+                                    style="font-size: 1.1rem; font-weight: 700; color: var(--text-main); margin-bottom: 10px;">
+                                    스마트 사물함</h4>
+                                <h5
+                                    style="font-size: 0.9rem; font-weight: 600; margin-bottom: 5px; color: var(--text-main);">
+                                    기본 스펙</h5>
+                                <ul
+                                    style="list-style: none; padding: 0; margin: 0 0 15px 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">
+                                    <li style="position: relative; padding-left: 10px; margin-bottom: 3px;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: var(--text-main); border-radius: 50%;"></span>
+                                        색상 : 블랙
+                                    </li>
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: var(--text-main); border-radius: 50%;"></span>
+                                        크기 : (높이)282mm / (넓이)202mm / <br>(깊이)70mm
+                                    </li>
+                                </ul>
+                                <h5
+                                    style="font-size: 0.9rem; font-weight: 600; margin-bottom: 5px; color: var(--text-main);">
+                                    특장점</h5>
+                                <ul
+                                    style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: var(--text-main); border-radius: 50%;"></span>
+                                        비밀번호 없이 유효한 QR코드로 사물함 개폐
+                                    </li>
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: var(--text-main); border-radius: 50%;"></span>
+                                        원격 관리 가능
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div style="display: flex; gap: 15px; margin-bottom: 40px;">
+                            <div style="flex: 0 0 100px; text-align: center;">
+                                <img src="images/Frame 4.png" alt="조명 전원 제어"
+                                    style="width: 100%; height: auto; object-fit: contain; max-height: 120px;">
+                            </div>
+                            <div style="flex: 1;">
+                                <h4
+                                    style="font-size: 1.1rem; font-weight: 700; color: var(--text-main); margin-bottom: 10px;">
+                                    조명 전원 제어</h4>
+                                <h5
+                                    style="font-size: 0.9rem; font-weight: 600; margin-bottom: 5px; color: var(--text-main);">
+                                    특장점</h5>
+                                <ul
+                                    style="list-style: none; padding: 0; margin: 0; font-size: 0.85rem; color: var(--text-muted); line-height: 1.4;">
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: var(--text-main); border-radius: 50%;"></span>
+                                        고객 이용 종료시 전등을 직접 꺼야하는 번거로움 최소화
+                                    </li>
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: var(--text-main); border-radius: 50%;"></span>
+                                        무선 제어로 인한 다양한 설치환경에 대응 가능
+                                    </li>
+                                    <li
+                                        style="position: relative; padding-left: 10px; margin-bottom: 3px; word-break: keep-all;">
+                                        <span
+                                            style="position: absolute; left: 0; top: 6px; width: 3px; height: 3px; background-color: var(--text-main); border-radius: 50%;"></span>
+                                        매장의 스마트한 분위기 조성
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="container">
+                    <!-- UI Modes -->
+                    <div class="section-title" style="margin-bottom: 10px;">
+                        <h2 style="word-break: keep-all; font-size: 1.5rem;">키오스크 화면 UI</h2>
+                    </div>
+                    <div class="ui-modes" style="margin-top: 0; text-align: center;">
+                        <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+                            <div style="flex: 1; max-width: 300px; text-align: center;">
+                                <img src="images/main_logout.png" alt="High Contrast Mode"
+                                    style="width: 100%; height: auto; border: 1px solid #A2A2A2; border-radius: 10px;">
+                                <h3
+                                    style="font-size: 1.5rem; font-weight: 600; margin-top: 20px; color: var(--text-main);">
+                                    초기화면</h3>
+                            </div>
+                            <div style="flex: 1; max-width: 300px; text-align: center;">
+                                <img src="images/main_login.png" alt="Basic Mode"
+                                    style="width: 100%; height: auto; border: 1px solid #A2A2A2; border-radius: 10px;">
+                                <h3
+                                    style="font-size: 1.5rem; font-weight: 600; margin-top: 20px; color: var(--text-main);">
+                                    로그인</h3>
+                            </div>
+                            <div style="flex: 1; max-width: 300px; text-align: center;">
+                                <img src="images/signup.png" alt="Low Stature Mode"
+                                    style="width: 100%; height: auto; border: 1px solid #A2A2A2; border-radius: 10px;">
+                                <h3
+                                    style="font-size: 1.5rem; font-weight: 600; margin-top: 20px; color: var(--text-main);">
+                                    회원가입</h3><br><br><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ui-modes" style="margin-top: 0; text-align: center;">
+
+                        <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap;">
+                            <div style="flex: 1; max-width: 300px; text-align: center;">
+                                <img src="images/select seat.png" alt="High Contrast Mode"
+                                    style="width: 100%; height: auto; border: 1px solid #A2A2A2; border-radius: 10px;">
+                                <h3
+                                    style="font-size: 1.5rem; font-weight: 600; margin-top: 20px; color: var(--text-main);">
+                                    좌석선택</h3>
+                            </div>
+                            <div style="flex: 1; max-width: 300px; text-align: center;">
+                                <img src="images/select price.png" alt="Basic Mode"
+                                    style="width: 100%; height: auto; border: 1px solid #A2A2A2; border-radius: 10px;">
+                                <h3
+                                    style="font-size: 1.5rem; font-weight: 600; margin-top: 20px; color: var(--text-main);">
+                                    요금선택</h3>
+                            </div>
+                            <div style="flex: 1; max-width: 300px; text-align: center;">
+                                <img src="images/select seattype.png" alt="Low Stature Mode"
+                                    style="width: 100%; height: auto; border: 1px solid #A2A2A2; border-radius: 10px;">
+                                <h3
+                                    style="font-size: 1.5rem; font-weight: 600; margin-top: 20px; color: var(--text-main);">
+                                    좌석타입선택</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </section>
+
+        <!-- Mobile App Section -->
+        <section style="margin-top: 100px; margin-bottom: 100px;" class="reveal">
+            <div class="container text-center">
+                <div class="section-title" style="margin-bottom: 50px;">
+                    <h2 style="word-break: keep-all;">쉽고 편리한 모바일 앱으로<br class="br-pc">고객 만족도를 높이세요.</h2>
+                </div>
+                <img src="images/mobile_app_screens.png" alt="Space Cube Mobile App Screens"
+                    style="max-width: 100%; height: auto; display: block; margin: 0 auto;">
+            </div>
+        </section>
+
+        <!-- 새로운 설치사례 섹션 추가 -->
+        <section style="margin-top: 100px; margin-bottom: 100px;" class="reveal">
+            <div class="container">
+                <div class="section-title">
+                    <h2 style="word-break: keep-all;">설치사례</h2>
+                </div>
+                <div class="installation-gallery reveal"
+                    style="display: flex; gap: 20px; justify-content: center; margin-top: 40px; flex-wrap: wrap;">
+                    <div style="flex: 1; min-width: 250px;">
+                        <img src="images/case1.jpg" alt="설치사례 1"
+                            style="width: 100%; height: 100%; object-fit: cover; aspect-ratio: 3/4; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    </div>
+                    <div style="flex: 1; min-width: 250px;">
+                        <img src="images/case2.jpg" alt="설치사례 2"
+                            style="width: 100%; height: 100%; object-fit: cover; aspect-ratio: 3/4; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    </div>
+                    <div style="flex: 1; min-width: 250px;">
+                        <img src="images/case3.jpg" alt="설치사례 3"
+                            style="width: 100%; height: 100%; object-fit: cover; aspect-ratio: 3/4; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery / References -->
+        <section>
+            <div class="container">
+                <div class="section-title">
+                    <h2 style="word-break: keep-all;">1,500개 이상의 매장<br class="br-pc">다양한 프리미엄 브랜드에서 선택한 키오스크
+                    </h2>
+                </div>
+                <div class="installation-image" style="text-align: center; margin-top: 40px;">
+                    <img src="images/installation_cases.jpg" alt="Installation Cases"
+                        style="max-width: 100%; height: auto; border-radius: 10px;">
+                </div>
+
+                <!-- CTA Button -->
+                <div style="text-align: center; margin-top: 80px; margin-bottom: 20px;" class="reveal">
+                    <a href="https://store.kakao.com/tobe/products/470737104" target="_blank" class="btn btn-primary"
+                        style="padding: 18px 50px; font-size: 20px;">
+                        <i style="margin-right: 10px;"></i> 더 알아보기
+                    </a>
+                </div>
+        </section>
+        </div>
+
+
+        <div id="tabContent-office" class="tab-content-block" style="display: none; padding: 60px 0;">
+            <div class="container text-center">
+                <h2>공유오피스 솔루션</h2>
+                <p style="margin-top:20px; color:var(--text-muted);">공유오피스에 최적화된 출입 통제 및 예약 관리 시스템을 제공합니다.</p>
+                <div style="height:300px;"></div>
+            </div>
+        </div>
+        <div id="tabContent-kidscafe" class="tab-content-block" style="display: none; padding: 60px 0;">
+            <div class="container text-center">
+                <h2>키즈카페 솔루션</h2>
+                <p style="margin-top:20px; color:var(--text-muted);">안전한 환경을 위한 키즈카페 전용 솔루션입니다.</p>
+                <div style="height:300px;"></div>
+            </div>
+        </div>
+        <div id="tabContent-storage" class="tab-content-block" style="display: none; padding: 60px 0;">
+            <div class="container text-center">
+                <h2>공유창고 솔루션</h2>
+                <p style="margin-top:20px; color:var(--text-muted);">24시간 무인 운영되는 공유창고 관리 솔루션입니다.</p>
+                <div style="height:300px;"></div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo"><img src="images/logo_white.png" alt="TOBESMART"></div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-info">
+                    <p>대표: 김광 I 주소: 경기도 성남시 중원구 둔촌대로 484 시콕스타워 116/117호</p>
+                    <p>전화: 1577-3119 I 팩스: 031-701-4119 I 이메일: tobesmart@tobesmart.co.kr</p>
+                    <p>COPYRIGHT(C) TOBESMART. ALL RIGHTS RESERVED.</p>
+                </div>
+                <div class="footer-contact">
+                    <p><strong>고객센터</strong></p>
+                    <p>전화 1577-3119 I 이메일 tobesmart@tobesmart.co.kr</p>
+                    <p>평일 09:00 ~ 18:00</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="skyscraper">
+        <a href="tel:1577-3119" class="sky-item sky-phone">
+            <div class="sky-text">
+                <span class="label-txt">전화상담</span>
+                <span class="value">1577-3119</span>
+            </div>
+        </a>
+        <a href="contact.html" class="sky-item sky-consult">
+            <div class="sky-text">
+                <span class="label">상담신청</span>
+            </div>
+        </a>
+        <a href="#" class="sky-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+            <i class="fas fa-chevron-up"></i>
+            <span>TOP</span>
+        </a>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            const skyscraper = document.querySelector('.skyscraper');
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+            if (window.scrollY > 100) {
+                skyscraper.classList.add('visible');
+            } else {
+                skyscraper.classList.remove('visible');
+            }
+        });
+
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('mobile-active');
+        });
+
+        lucide.createIcons();
+
+        // Theme Toggle Logic
+        const themeToggle = document.getElementById('theme-toggle');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        if (currentTheme === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+
+        themeToggle.addEventListener('click', () => {
+            let theme = document.documentElement.getAttribute('data-theme');
+            if (theme === 'dark') {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('active');
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        document.querySelectorAll('section, .stat-circle, .feature-item, .system-image img').forEach(el => {
+            el.classList.add('reveal');
+            observer.observe(el);
+        });
+    </script>
+
+    <script>
+        function updateTabs() {
+            let hash = window.location.hash;
+            if (!hash) {
+                const firstTab = document.querySelector('.page-tabs a');
+                if (firstTab) hash = firstTab.getAttribute('href');
+            }
+            if (!hash) return;
+
+            document.querySelectorAll('#pageTabs li').forEach(li => {
+                const a = li.querySelector('a');
+                if (a.getAttribute('href') === hash) {
+                    li.classList.add('active');
+                } else {
+                    li.classList.remove('active');
+                }
+            });
+
+            document.querySelectorAll('.tab-content-block').forEach(block => {
+                if ('#' + block.id.replace('tabContent-', '') === hash) {
+                    block.style.display = 'block';
+                    // Trigger animations within block
+                    block.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
+                } else {
+                    block.style.display = 'none';
+                }
+            });
+        }
+        window.addEventListener('hashchange', updateTabs);
+        document.addEventListener('DOMContentLoaded', updateTabs);
+    </script>
+</body>
+
+</html>
